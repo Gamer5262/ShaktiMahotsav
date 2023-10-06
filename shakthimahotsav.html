@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en" style="--line-color: #FFF;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+  <script type="module" src="./shakthimahotsav_files/client"></script>
+
+  
+  <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navratri</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+    body {
+      background-image: url("data:image/svg+xml,%3Csvg width='30' height='60' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%23131313' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-color: #0c0c0c
+    }
+  </style>
+<style type="text/css" data-vite-dev-id="E:/Navratri/ShaktiMahotsav/src/App.css"></style><style type="text/css" data-vite-dev-id="E:/Navratri/ShaktiMahotsav/src/components/Gallery.css">.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 70px 30px 40px 30px;
+    width: 75vw;
+    height: 80vh;
+    list-style: none;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    color: rgb(103, 103, 103);
+    @media screen and (max-width: 768px) {
+            width: 85vw;
+            height: 75vh;
+        }
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1000px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.gallery-item{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    max-width: 400px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.gallery-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-in-out;
+}
+
+.gallery-image:hover{
+    transform: scale(1.1);
+}
+
+img {
+    width: 60vw;
+    height: 65vh;
+    @media screen and (max-width: 768px) {
+        width: 70vw;
+        height: 55vh;
+    }
+    
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: orange;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]:focus {
+    outline: max(0.5px, 0.05em) solid currentColor;
+}
+
+.radio-btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin: 20px 0;
+    width: 30%;
+    @media screen and (max-width: 768px) {
+        width: 80%
+    }
+}
+
+.gallery-container{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+}</style><style type="text/css" data-vite-dev-id="E:/Navratri/ShaktiMahotsav/node_modules/react-vertical-timeline-component/style.min.css">.vertical-timeline *{box-sizing:border-box}.vertical-timeline{width:95%;max-width:1170px;margin:0 auto;position:relative;padding:2em 0}.vertical-timeline::after{content:'';display:table;clear:both}.vertical-timeline::before{content:'';position:absolute;top:0;left:18px;height:100%;width:4px;background:var(--line-color)}.vertical-timeline.vertical-timeline--one-column-right::before{right:18px;left:unset}@media only screen and (min-width:1170px){.vertical-timeline.vertical-timeline--two-columns{width:90%}.vertical-timeline.vertical-timeline--two-columns:before{left:50%;margin-left:-2px}}.vertical-timeline-element{position:relative;margin:2em 0}.vertical-timeline-element>div{min-height:1px}.vertical-timeline-element:after{content:"";display:table;clear:both}.vertical-timeline-element:first-child{margin-top:0}.vertical-timeline-element:last-child{margin-bottom:0}@media only screen and (min-width:1170px){.vertical-timeline-element{margin:4em 0}.vertical-timeline-element:first-child{margin-top:0}.vertical-timeline-element:last-child{margin-bottom:0}}.vertical-timeline-element-icon{position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)}.vertical-timeline--one-column-right .vertical-timeline-element-icon{right:0;left:unset}.vertical-timeline-element-icon svg{display:block;width:24px;height:24px;position:relative;left:50%;top:50%;margin-left:-12px;margin-top:-12px}@media only screen and (min-width:1170px){.vertical-timeline--two-columns .vertical-timeline-element-icon{width:60px;height:60px;left:50%;margin-left:-30px}}.vertical-timeline-element-icon{-webkit-transform:translateZ(0);-webkit-backface-visibility:hidden}.vertical-timeline--animate .vertical-timeline-element-icon.is-hidden{visibility:hidden}.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in{visibility:visible;-webkit-animation:cd-bounce-1 .6s;-moz-animation:cd-bounce-1 .6s;animation:cd-bounce-1 .6s}@-webkit-keyframes cd-bounce-1{0%{opacity:0;-webkit-transform:scale(.5)}60%{opacity:1;-webkit-transform:scale(1.2)}100%{-webkit-transform:scale(1)}}@-moz-keyframes cd-bounce-1{0%{opacity:0;-moz-transform:scale(.5)}60%{opacity:1;-moz-transform:scale(1.2)}100%{-moz-transform:scale(1)}}@keyframes cd-bounce-1{0%{opacity:0;-webkit-transform:scale(.5);-moz-transform:scale(.5);-ms-transform:scale(.5);-o-transform:scale(.5);transform:scale(.5)}60%{opacity:1;-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);transform:scale(1.2)}100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1)}}.vertical-timeline-element-content{position:relative;margin-left:60px;background:#fff;border-radius:.25em;padding:1em;box-shadow:0 3px 0 #ddd}.vertical-timeline--one-column-right .vertical-timeline-element-content{margin-right:60px;margin-left:unset}.vertical-timeline-element--no-children .vertical-timeline-element-content{background:0 0;box-shadow:none}.vertical-timeline-element-content:after{content:"";display:table;clear:both}.vertical-timeline-element-content h2{color:#303e49}.vertical-timeline-element-content .vertical-timeline-element-date,.vertical-timeline-element-content p{font-size:13px;font-size:.8125rem;font-weight:500}.vertical-timeline-element-content .vertical-timeline-element-date{display:inline-block}.vertical-timeline-element-content p{margin:1em 0 0;line-height:1.6}.vertical-timeline-element-title{margin:0}.vertical-timeline-element-subtitle{margin:0}.vertical-timeline-element-content .vertical-timeline-element-date{float:left;padding:.8em 0;opacity:.7}.vertical-timeline-element-content-arrow{content:'';position:absolute;top:16px;right:100%;height:0;width:0;border:7px solid transparent;border-right:7px solid #fff}.vertical-timeline--one-column-right .vertical-timeline-element-content-arrow{content:'';position:absolute;top:16px;right:unset;left:100%;height:0;width:0;border:7px solid transparent;border-left:7px solid #fff}.vertical-timeline--one-column-right .vertical-timeline-element-content::before{left:100%;border-left:7px solid #fff;border-right:unset}.vertical-timeline-element--no-children .vertical-timeline-element-content::before{display:none}.vertical-timeline-element--no-children .vertical-timeline-element-content-arrow{display:none}@media only screen and (min-width:768px){.vertical-timeline-element-content h2{font-size:20px;font-size:1.25rem}.vertical-timeline-element-content p{font-size:16px;font-size:1rem}.vertical-timeline-element-content .vertical-timeline-element-date{font-size:14px;font-size:.875rem}}@media only screen and (min-width:1170px){.vertical-timeline--two-columns .vertical-timeline-element-content{margin-left:0;padding:1.5em;width:44%}.vertical-timeline--two-columns .vertical-timeline-element-content-arrow{top:24px;left:100%;transform:rotate(180deg)}.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date{position:absolute;width:100%;left:124%;top:6px;font-size:16px;font-size:1rem}.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content,.vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content{float:right}.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow,.vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow{top:24px;left:auto;right:100%;transform:rotate(0)}.vertical-timeline--one-column-right .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow,.vertical-timeline--one-column-right .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow{top:24px;left:100%;right:auto;transform:rotate(0)}.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date,.vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date{left:auto;right:124%;text-align:right}}.vertical-timeline--animate .vertical-timeline-element-content.is-hidden{visibility:hidden}.vertical-timeline--animate .vertical-timeline-element-content.bounce-in{visibility:visible;-webkit-animation:cd-bounce-2 .6s;-moz-animation:cd-bounce-2 .6s;animation:cd-bounce-2 .6s}@media only screen and (min-width:1170px){.vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in,.vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in{-webkit-animation:cd-bounce-2-inverse .6s;-moz-animation:cd-bounce-2-inverse .6s;animation:cd-bounce-2-inverse .6s}}@media only screen and (max-width:1169px){.vertical-timeline--animate .vertical-timeline-element-content.bounce-in{visibility:visible;-webkit-animation:cd-bounce-2-inverse .6s;-moz-animation:cd-bounce-2-inverse .6s;animation:cd-bounce-2-inverse .6s}}@-webkit-keyframes cd-bounce-2{0%{opacity:0;-webkit-transform:translateX(-100px)}60%{opacity:1;-webkit-transform:translateX(20px)}100%{-webkit-transform:translateX(0)}}@-moz-keyframes cd-bounce-2{0%{opacity:0;-moz-transform:translateX(-100px)}60%{opacity:1;-moz-transform:translateX(20px)}100%{-moz-transform:translateX(0)}}@keyframes cd-bounce-2{0%{opacity:0;-webkit-transform:translateX(-100px);-moz-transform:translateX(-100px);-ms-transform:translateX(-100px);-o-transform:translateX(-100px);transform:translateX(-100px)}60%{opacity:1;-webkit-transform:translateX(20px);-moz-transform:translateX(20px);-ms-transform:translateX(20px);-o-transform:translateX(20px);transform:translateX(20px)}100%{-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);-o-transform:translateX(0);transform:translateX(0)}}@-webkit-keyframes cd-bounce-2-inverse{0%{opacity:0;-webkit-transform:translateX(100px)}60%{opacity:1;-webkit-transform:translateX(-20px)}100%{-webkit-transform:translateX(0)}}@-moz-keyframes cd-bounce-2-inverse{0%{opacity:0;-moz-transform:translateX(100px)}60%{opacity:1;-moz-transform:translateX(-20px)}100%{-moz-transform:translateX(0)}}@keyframes cd-bounce-2-inverse{0%{opacity:0;-webkit-transform:translateX(100px);-moz-transform:translateX(100px);-ms-transform:translateX(100px);-o-transform:translateX(100px);transform:translateX(100px)}60%{opacity:1;-webkit-transform:translateX(-20px);-moz-transform:translateX(-20px);-ms-transform:translateX(-20px);-o-transform:translateX(-20px);transform:translateX(-20px)}100%{-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);-o-transform:translateX(0);transform:translateX(0)}}</style><style type="text/css" data-vite-dev-id="E:/Navratri/ShaktiMahotsav/src/components/Form.css">.container-form{
+    padding: 50px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center ;
+}
+.input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+form{
+    margin-top: 20px;
+}</style><style data-styled="active" data-styled-version="6.0.8">.kpWPcN{height:100vh;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-between;}@media only screen and (max-width: 768px){.kpWPcN{height:200vh;}}.dHcYhv{height:100%;scroll-snap-align:center;width:1400px;display:flex;justify-content:space-between;}@media only screen and (max-width: 768px){.dHcYhv{width:100%;flex-direction:column;align-items:center;justify-content:center;}}.gwldCu{flex:2;display:flex;flex-direction:column;justify-content:center;gap:20px;}@media only screen and (max-width: 768px){.gwldCu{flex:1;align-items:center;}}.hdPDPi{font-size:60px;color:#ff6611;font-family:'Kaushan Script',cursive;}@media only screen and (max-width: 768px){.hdPDPi{font-size:45px;text-align:center;}}.cjTdbE{font-family:'Inclusive Sans',sans-serif;text-align:justify;font-size:20px;width:80%;color:lightgray;}@media only screen and (max-width: 768px){.cjTdbE{padding:20px;width:100%;text-align:center;}}.iUxXhm{flex:3;position:relative;}@media only screen and (max-width: 768px){.iUxXhm{flex:1;display:flex;justify-content:center;align-items:center;width:100vw;}}.iemqEV{width:800px;height:600px;object-fit:contain;position:absolute;top:0;bottom:0;left:0;right:0;animation:animate 2s infinite ease alternate;}@media only screen and (max-width: 768px){.iemqEV{width:300px;height:400px;}}@keyframes animate{to{transform:translateY(20px);}}.jBFidI{display:flex;justify-content:center;}@media only screen and (max-width: 768px){.jBFidI{width:100%;}}.fIRIev{width:1400px;display:flex;justify-content:space-between;align-items:center;}@media only screen and (max-width: 768px){.fIRIev{width:100%;padding:10px;}}.eVcenD{display:flex;align-items:center;gap:50px;}.bQeMGN{display:flex;gap:50px;list-style:none;}@media only screen and (max-width: 768px){.bQeMGN{display:none;}}.bIvcOD{font-size:25px;color:#ff6611;font-family:'Kaushan Script',cursive;}@media only screen and (max-width: 768px){.bIvcOD{text-align:center;}}.biyGES{cursor:pointer;font-family:'Cabin',sans-serif;display:inline-block;position:relative;color:#f1f1f1;}.biyGES:hover{color:#ff5533;transform:scaleX(1);transform-origin:bottom left;}.biyGES:hover::after{content:'';position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:0;left:0;background-color:#0087ca;transform-origin:bottom right;transition:transform 0.25s ease-out;}.eQGhfD{display:flex;align-items:center;gap:20px;}.eQHpRK{font-family:'Cabin',sans-serif;padding:10px 15px;background-color:#ff6611;color:white;border:none;border-radius:5px;cursor:pointer;}.lgzRon{height:100vh;scroll-snap-align:center;background-color:#1a1a1a;}.eLToTB{width:100%;height:100%;display:flex;justify-content:center;align-items:center;gap:50px;}.hNBEAU{font-weight:200;}.gYczmt{width:500px;display:flex;flex-direction:column;gap:25px;}@media only screen and (max-width: 768px){.gYczmt{width:300px;}}.cyweM{padding:20px;background-color:#e8e6e6;border:none;border-radius:5px;}.ddHFML{padding:20px;border:none;border-radius:5px;background-color:#e8e6e6;}.bbPJgc{background-color:#ff6611;color:white;border:none;font-weight:bold;cursor:pointer;border-radius:5px;padding:20px;}</style><style data-emotion="css-global" data-s="">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}</style><style data-emotion="css-global" data-s="">*,*::before,*::after{box-sizing:inherit;}</style><style data-emotion="css-global" data-s="">strong,b{font-weight:700;}</style><style data-emotion="css-global" data-s="">body{margin:0;color:#fff;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#121212;}</style><style data-emotion="css-global" data-s="">@media print{body{background-color:#fff;}}</style><style data-emotion="css-global" data-s="">body::backdrop{background-color:#121212;}</style></head>
+
+<body style=" margin:0; padding: 0; background-color: #0c0c0c;" cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1129.0" data-gr-ext-installed="">
+  <div class="background">
+    <div>
+      <div id="root" style="color: aliceblue;"><div><div class="sc-iBdoyZ jBFidI"><div class="sc-fsYfxw fIRIev"><div class="sc-qZruQ eVcenD"><h2 class="sc-kFCrIq bIvcOD">ShakthiMahotsav</h2><ul class="sc-jsEeA-d bQeMGN"><a href="http://localhost:5173/"><li class="sc-irLvoH biyGES">Home</li></a><a href="http://localhost:5173/about"><li class="sc-irLvoH biyGES">About</li></a><a href="http://localhost:5173/team"><li class="sc-irLvoH biyGES">Team</li></a></ul></div><div class="sc-csKJRI eQGhfD"><button class="sc-eTNxZ eQHpRK">Register</button></div></div></div><div><div class="sc-beyTiQ kpWPcN"><div class="sc-guDMob dHcYhv"><div class="sc-dmyDmy gwldCu"><h1 class="sc-hLQTFJ hdPDPi">Shaktimahotsav</h1><p class="sc-eDLKEg cjTdbE">Join our Navratri celebrations and experience the spirit of devotion, music, and dance. Let's celebrate together!.</p></div><div class="sc-jTQDJr iUxXhm"><img src="./shakthimahotsav_files/hero-img.png" class="sc-gLLuHO iemqEV"></div></div></div><div class="container"><div class="gallery-container"><img src="./shakthimahotsav_files/img1.avif" alt="slide_image_1"><div class="radio-btns"><input type="radio" name="image" value="/src/assets/img1.avif"><input type="radio" name="image" value="/src/assets/img2.avif"><input type="radio" name="image" value="/src/assets/img3.avif"><input type="radio" name="image" value="/src/assets/img4.avif"><input type="radio" name="image" value="/src/assets/img5.avif"><input type="radio" name="image" value="/src/assets/img6.png"><input type="radio" name="image" value="/src/assets/img7.jpg"></div></div></div><div><div class="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns"><div id="" class="vertical-timeline-element--work vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow" style="border-right: 7px solid rgb(33, 150, 243);"></div><h3 class="vertical-timeline-element-title">Creative Director</h3><h4 class="vertical-timeline-element-subtitle">Miami, FL</h4><p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p><span class="vertical-timeline-element-date">2011 - present</span></div></div><div id="" class="vertical-timeline-element--work vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Art Director</h3><h4 class="vertical-timeline-element-subtitle">San Francisco, CA</h4><p>Creative Direction, User Experience, Visual Design, SEO, Online Marketing</p><span class="vertical-timeline-element-date">2010 - 2011</span></div></div><div id="" class="vertical-timeline-element--work vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Web Designer</h3><h4 class="vertical-timeline-element-subtitle">Los Angeles, CA</h4><p>User Experience, Visual Design</p><span class="vertical-timeline-element-date">2008 - 2010</span></div></div><div id="" class="vertical-timeline-element--work vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Web Designer</h3><h4 class="vertical-timeline-element-subtitle">San Francisco, CA</h4><p>User Experience, Visual Design</p><span class="vertical-timeline-element-date">2006 - 2008</span></div></div><div id="" class="vertical-timeline-element--education vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3><h4 class="vertical-timeline-element-subtitle">Online Course</h4><p>Strategy, Social Media</p><span class="vertical-timeline-element-date">April 2013</span></div></div><div id="" class="vertical-timeline-element--education vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Agile Development Scrum Master</h3><h4 class="vertical-timeline-element-subtitle">Certification</h4><p>Creative Direction, User Experience, Visual Design</p><span class="vertical-timeline-element-date">November 2012</span></div></div><div id="" class="vertical-timeline-element--education vertical-timeline-element"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"><div class="vertical-timeline-element-content-arrow"></div><h3 class="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3><h4 class="vertical-timeline-element-subtitle">Bachelor Degree</h4><p>Creative Direction, Visual Design</p><span class="vertical-timeline-element-date">2002 - 2006</span></div></div><div id="" class="vertical-timeline-element vertical-timeline-element--no-children"><span class="vertical-timeline-element-icon bounce-in" style="background: rgb(255, 102, 17); color: rgb(255, 255, 255);"></span><div class="vertical-timeline-element-content bounce-in"><div class="vertical-timeline-element-content-arrow"></div><span class="vertical-timeline-element-date"></span></div></div></div></div><div class="sc-brSaGm lgzRon"><div class="sc-ktwNLz eLToTB"><form class="sc-fmKFmJ gYczmt"><h1 class="sc-hABBGs hNBEAU">Contact Us</h1><input placeholder="Name" name="name" class="sc-fHekAb cyweM"><input placeholder="Email" name="email" class="sc-fHekAb cyweM"><textarea placeholder="Write your message" name="message" rows="10" class="sc-blmCWO ddHFML"></textarea><button type="submit" class="sc-ifysJV bbPJgc">Send</button></form></div></div></div></div></div>
+      <script type="module" src="./shakthimahotsav_files/main.jsx"></script>
+    </div>
+  </div>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

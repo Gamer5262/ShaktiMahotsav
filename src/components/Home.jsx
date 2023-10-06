@@ -2,6 +2,7 @@ import Gallery from './Gallery'
 import Hero from './Hero'
 import Event from './Event'
 import Navbar from './Navbar'
+import Links from './Links'
 import Form from './Form'
 import  { useState } from 'react';
 import Contact from './Contact'
@@ -17,6 +18,7 @@ function Home() {
   if (Registering === false) {
     return (<div>
         <Hero />
+        <Links/>
         <Gallery />
         <Event />
         <Contact />

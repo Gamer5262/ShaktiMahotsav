@@ -4,15 +4,18 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 60px;
     padding: 70px 30px 40px 30px;
-    width: 100%;
-    max-width: 1000px;
+    width: 75vw;
+    height: 90vh;
     list-style: none;
     background-color: #1a1a1a;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     border-radius: 5px;
     color: rgb(103, 103, 103);
+    @media screen and (max-width: 768px) {
+            width: 85vw;
+            height: 75vh;
+        }
 }
 
 .gallery{
@@ -54,8 +57,13 @@
 }
 
 img {
-    width: 900px;
-    height: 600px;
+    width: 60vw;
+    height: 75vh;
+    @media screen and (max-width: 768px) {
+        width: 70vw;
+        height: 55vh;
+    }
+    
 }
 
 input[type="radio"] {
@@ -100,6 +108,16 @@ input[type="radio"]:focus {
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px 0;
     width: 30%;
+    @media screen and (max-width: 768px) {
+        width: 80%
+    }
+}
+
+.gallery-container{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
 }

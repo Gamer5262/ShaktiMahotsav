@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Paper, Typography, TextField, FormGroup, FormControlLabel, Checkbox, formControlClasses, responsiveFontSizes  } from "@mui/material";
 import { useForm } from "react-hook-form";
 import "./Form.css";

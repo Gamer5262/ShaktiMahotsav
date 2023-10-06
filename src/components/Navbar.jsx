@@ -41,6 +41,7 @@ const List = styled.ul`
 const H2 = styled.h2`
   font-size: 25px;
   color: #ff6611; 
+  margin-left: 20px;
   font-family: 'Kaushan Script', cursive;
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -52,8 +53,9 @@ const ListItem = styled.li`
   font-family: 'Cabin', sans-serif;
   display: inline-block;
   position: relative;
+  color: #f1f1f1;
   &:hover {
-    color: #aa5533;
+    color: #ff5533;
     transform: scaleX(1);
     transform-origin: bottom left;
   }
@@ -101,9 +103,9 @@ const Navbar = ({ change }) => {
         <Links>
           <H2 >ShakthiMahotsav</H2>
           <List>
-            <ListItem><Link to="/">Home</Link></ListItem>
-            <ListItem><Link to="/about">About</Link></ListItem>
-            <ListItem><Link to="/team">Team</Link></ListItem>
+            <Link to="/"><ListItem>Home</ListItem></Link>
+            <Link to="/about"><ListItem>About</ListItem></Link>
+            <Link to="/team"><ListItem>Team</ListItem></Link>
           </List>
         </Links>
         <Icons>

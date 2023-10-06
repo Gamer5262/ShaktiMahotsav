@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="container">
       {/* implement a scrollable gallery with radio buttons and auto move */}
-      <div>
+      <div className='gallery-container'>
         <img src={image} alt="slide_image_1" />
         <div className='radio-btns'>
           <input
