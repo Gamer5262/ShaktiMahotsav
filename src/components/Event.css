@@ -11,7 +11,7 @@
 }
 .section-event{
     width: 70vw;
-    background-color: #2f2f2f43;
+    background-color:rgb(27, 27, 27, 0.8);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -57,4 +57,3 @@
     cursor: pointer;
     color: #ffffff;
 }
-

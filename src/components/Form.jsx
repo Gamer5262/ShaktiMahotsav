@@ -23,8 +23,10 @@ ErrorMessage.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-const Form = () => {
-  
+const Form = ({change}) => {
+  function toggleForm() {
+    change();
+  }
   const {
     register,
     handleSubmit,
@@ -50,7 +52,10 @@ const Form = () => {
   };
   return (
     <div className=" popup">
-      <div className="popup-inner">
+      <div>
+        <div className="close-btn" onClick={toggleForm}>
+            X
+        </div>
       <Paper elevation={3} className="paper" style={{ maxWidth: "70vw", minWidth: "60vw", padding: "50px", color: "#fff" }}>
         <Typography variant="h5" className="title">
           Register

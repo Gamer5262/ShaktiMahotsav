@@ -2,18 +2,22 @@ import "./Event.css"
 import { useState } from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import Form from './Form.jsx';
 
-
-function displayFrom() {
+const Button = ({changer}) => {
+  function handleClick() {
+    changer();
+  }
   return (
-    <div>
-      <Form />
+    <div className="btn-form" onClick={handleClick}>
+      Register
     </div>
-  );
+  )
 }
 
-function Event() {
+const Event = ({ change }) => {
+  function click() {
+    change();
+  }
   const [selected, setSelected] = useState("Day 1");
   let days = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"];
   const day_events = {
@@ -101,8 +105,7 @@ function Event() {
               contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff'}}
               contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
               date={event[0]}
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' , width:"25px", height:"25px", marginLeft:"-12.5px", marginTop:"20px"}}
-              animate={true}
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', height: '30px', width: '30px', marginLeft:'-15px'}}
             >
               <h4 className="vertical-timeline-element-title">{event[1]}</h4>
               <p className="vertical-timeline-element-subtitle">{event[2]}</p>
@@ -132,7 +135,7 @@ function Event() {
             day_selected()
         }
         <div>
-          <button className="btn-form" onClick={displayFrom()}>Register</button>
+          <Button changer={click} />
         </div>
       </div>
     </div>

@@ -17,7 +17,8 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 200;
+  font-weight: 100;
+  font-family: "Cabin", sans-serif;
   color: #fff;
 `;
 

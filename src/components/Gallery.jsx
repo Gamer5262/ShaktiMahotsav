@@ -6,7 +6,6 @@ import slide_image_5 from '../assets/img5.avif';
 import slide_image_6 from '../assets/img6.png';
 import slide_image_7 from '../assets/img7.jpg';
 
-import { Carousel } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
