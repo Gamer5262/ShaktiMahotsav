@@ -1,39 +1,26 @@
 import Gallery from './Gallery'
 import Hero from './Hero'
 import Event from './Event'
-import Navbar from './Navbar'
-import Links from './Links'
-import Form from './Form'
-import  { useState } from 'react';
 import Contact from './Contact'
+import About from './About'
+import Team from './Team'
+import Footer from './Footer'
+import './Home.css'
+
 
 function Home() {
-    const [Registering, setRegister] = useState(false);
-
-  function isRegistering () {
-    setRegister(true);
-  }
-
-  const logic = () => {
-  if (Registering === false) {
-    return (<div>
-        <Hero />
-        <Links/>
-        <Gallery />
-        <Event />
-        <Contact />
-    </div>);
-  }
-  else {
-    return (<div>
-      <Form />
-    </div>);
-  }
-};
   return (
-    <div>
-        <Navbar change = {isRegistering} />
-        {logic()}
+    <div id='home'>
+      <div className='background'>
+      <Hero />
+        <About />
+        <Event />
+        <Gallery />
+        <Team /> 
+        <Contact />
+        <Footer/>
+      </div>
+      
     </div>
   )
 }

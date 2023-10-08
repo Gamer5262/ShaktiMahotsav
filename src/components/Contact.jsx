@@ -18,6 +18,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-weight: 200;
+  color: #fff;
 `;
 
 const Form = styled.form`
@@ -84,19 +85,21 @@ const Contact = () => {
     */
   
   return (
-    <Section>
+    <Section id="contact">
       <Container>
         <Form  >
-            <Title>Contact Us</Title>
+            <Title>Suggestion</Title>
             <Input placeholder="Name" name="name" />
-            <Input placeholder="Email" name="email" />
+            <Input placeholder="Phone Number" name="phone_number" />
             <TextArea
               placeholder="Write your message"
               name="message"
               rows={10}
             />
             <Button type="submit">Send</Button>
-          </Form>
+        </Form>
+        <footer>
+        </footer>
       </Container>
     </Section>
   );

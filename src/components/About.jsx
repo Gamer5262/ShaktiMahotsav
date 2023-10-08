@@ -1,9 +1,9 @@
-import Navbar from "./Navbar"
+
 
 function About() {
   return (
-    <div>
-      <Navbar />
+    <div id="about">
+      About
     </div>
   )
 }

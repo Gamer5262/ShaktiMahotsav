@@ -2,8 +2,8 @@ import Navbar from "./Navbar"
 
 const Team = () => {
   return (
-    <div>
-      <Navbar />
+    <div id="team">
+      Team
     </div>
   )
 }

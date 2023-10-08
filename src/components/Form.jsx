@@ -1,7 +1,9 @@
-import { Button, Paper, Typography, TextField, FormGroup, FormControlLabel, Checkbox, formControlClasses, responsiveFontSizes  } from "@mui/material";
+import { Button, Paper, Typography, TextField, FormGroup, FormControlLabel, Checkbox  } from "@mui/material";
 import { useForm } from "react-hook-form";
 import "./Form.css";
 import axios from 'axios';
+
+import PropTypes from 'prop-types';
 
 function SuccessMessage() {
   return (
@@ -16,6 +18,10 @@ function ErrorMessage(props) {
     </div>
   );
 }
+
+ErrorMessage.propTypes = {
+  message: PropTypes.string.isRequired,
+};
 
 const Form = () => {
   
@@ -33,7 +39,9 @@ const Form = () => {
       const response = await axios.post("http://localhost/Form/submit.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
-      maxContentLength: 100});
+          maxContentLength: 100
+        });
+      console.log(response);
       SuccessMessage();
     } catch (error) {
       console.error(error);
@@ -41,7 +49,8 @@ const Form = () => {
     }
   };
   return (
-    <div className="container-form">
+    <div className=" popup">
+      <div className="popup-inner">
       <Paper elevation={3} className="paper" style={{ maxWidth: "70vw", minWidth: "60vw", padding: "50px", color: "#fff" }}>
         <Typography variant="h5" className="title">
           Register
@@ -96,6 +105,9 @@ const Form = () => {
               <FormControlLabel control={<Checkbox />} label="Day 5" />
               <FormControlLabel control={<Checkbox />} label="Day 6" />
               <FormControlLabel control={<Checkbox />} label="Day 7" />
+              <FormControlLabel control={<Checkbox />} label="Day 8" />
+              <FormControlLabel control={<Checkbox />} label="Day 9" />
+              <FormControlLabel control={<Checkbox />} label="Day 10" />
 
             </FormGroup>
           </div>
@@ -103,7 +115,8 @@ const Form = () => {
             Submit
           </Button>
         </form>
-    </Paper>
+        </Paper>
+        </div>
     </div>
   );
 };

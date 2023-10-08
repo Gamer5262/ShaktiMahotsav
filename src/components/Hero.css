@@ -1,0 +1,7 @@
+.img-slider{
+    width: auto;
+    height: 90vh;
+}
+.slides{
+    z-index: -1;
+}
