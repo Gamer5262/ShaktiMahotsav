@@ -5,6 +5,10 @@
     align-items: center;
     padding: 4vw 1vh;
 }
+.vertical-timeline-element-date{
+    color: rgb(255, 255, 255) !important;
+    font-size: larger !important;
+}
 .section-event{
     width: 70vw;
     background-color: #2f2f2f43;

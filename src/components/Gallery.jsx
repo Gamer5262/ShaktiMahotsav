@@ -17,7 +17,7 @@ import './Gallery.css';
 
 function App() {
   return (
-    <div className='gallery'>
+    <div className='gallery' id='gallery'>
       <div className='section-gallery'>
         <Swiper
           spaceBetween={30}

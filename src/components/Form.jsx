@@ -98,17 +98,16 @@ const Form = () => {
           </div>
           <div >
             <FormGroup>
-              <FormControlLabel control={<Checkbox />} label="Day 1" />
-              <FormControlLabel control={<Checkbox />} label="Day 2" />
-              <FormControlLabel control={<Checkbox />} label="Day 3" />
-              <FormControlLabel control={<Checkbox />} label="Day 4" />
-              <FormControlLabel control={<Checkbox />} label="Day 5" />
-              <FormControlLabel control={<Checkbox />} label="Day 6" />
-              <FormControlLabel control={<Checkbox />} label="Day 7" />
-              <FormControlLabel control={<Checkbox />} label="Day 8" />
-              <FormControlLabel control={<Checkbox />} label="Day 9" />
-              <FormControlLabel control={<Checkbox />} label="Day 10" />
-
+              <FormControlLabel control={<Checkbox />} label="Day 1" {...register('day1')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 2" {...register('day2')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 3" {...register('day3')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 4" {...register('day4')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 5" {...register('day5')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 6" {...register('day6')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 7" {...register('day7')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 8" {...register('day8')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 9" {...register('day9')}/>
+              <FormControlLabel control={<Checkbox />} label="Day 10" {...register('day10')}/>
             </FormGroup>
           </div>
           <Button variant="contained" style={{marginTop :"20px"}} type="submit" className="btn">
