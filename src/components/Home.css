@@ -1,0 +1,11 @@
+.background{
+    background-image: url("../assets/2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.background::-webkit-scrollbar {
+    display: none;
+}
