@@ -8,9 +8,9 @@ const Hero = () => {
   return (
     <div>
       <div className='slides'>
-        <Carousel >
+        <Carousel fade>
           
-          <Carousel.Item>
+          <Carousel.Item interval={1200}>
             <img
               className="d-block w-100 img-slider"
               src={Img1}
@@ -21,7 +21,7 @@ const Hero = () => {
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={1200}>
             <img
               className="d-block w-100 img-slider"
               src={Img2}
@@ -33,7 +33,7 @@ const Hero = () => {
               <button>Click</button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={1200}>
             <img
               className="d-block w-100 img-slider"
               src={Img3}

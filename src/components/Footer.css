@@ -28,6 +28,10 @@
     width: 80vw;
     height: 25vh;
     margin-top: 20px;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        height: 40vh;
+    }
 }
 
 .content-footer{
@@ -38,24 +42,31 @@
     flex-direction: column;
 }
 
+.container-footer > h5 {
+    font-size: 18px;
+}
+.container-footer>h6 {
+    font-size: 14px;
+    font-weight:lighter;
+}
+
 .instagram , .facebook, .twitter, .youtube {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: inherit;
-}
-.instagram  p, .facebook p, .twitter p, .youtube p{
-    margin-top: 1.5vh;
 }
 
 .icons{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
     height: inherit;
-    width: 11vw;
+    margin: 30px 0px ;
+    width: 20vw;
+    @media screen and (max-width: 800px) {
+        width: 50vw;
+    }
 }
 
 .hr{
@@ -63,4 +74,13 @@
     background-color: #fff;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.amrita_logo{
+    width: 17vw;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 800px) {
+        width: 30vw;
+    }
 }
