@@ -61,7 +61,6 @@ const Form = ({change}) => {
           Register
         </Typography>
         <form onSubmit={handleSubmit(Submit)}>
-          <div className="input-container">
             <div className="input">
               <TextField
                 label="Name"
@@ -80,9 +79,7 @@ const Form = ({change}) => {
               />
               {errors.rollNumber && <span className="error">Roll Number is required</span>}
             </div>
-          </div>
-          <div className="input-container">
-            <div className="input">
+          <div className="input">
               <TextField
                 label="Email"
                 variant="outlined"
@@ -100,7 +97,6 @@ const Form = ({change}) => {
               />
               {errors.phoneNumber && <span className="error">Phone Number is required</span>}
             </div>
-          </div>
           <div >
             <FormGroup>
               <FormControlLabel control={<Checkbox />} label="Day 1" {...register('day1')}/>

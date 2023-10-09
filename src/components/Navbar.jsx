@@ -16,11 +16,11 @@ function Navbar() {
 			<h3>Shakthimahotsav</h3>
 			<nav ref={navRef}>
 				<a href="#">Home</a>
-        		<a href="#about">About</a>
-        		<a href="#events">Events</a>
+				<a href="#about">About</a>
+				<a href="#events">Events</a>
 				<a href="#gallery">Gallery</a>
-        		<a href="#team">Team</a>
-        		<a href="#contact">Contact</a>
+				<a href="#team">Team</a>
+				<a href="#contact">Contact</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

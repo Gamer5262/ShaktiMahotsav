@@ -3,17 +3,20 @@ import styled from "styled-components";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
-  background-color: #1a1a1a;
-`;
-
-const Container = styled.div`
   width: 100%;
-  height: 100%;
+
+  background-color: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
 `;
 
 const Title = styled.h1`
@@ -95,7 +98,7 @@ const Contact = () => {
             <TextArea
               placeholder="Write your message"
               name="message"
-              rows={10}
+              rows={7}
             />
             <Button type="submit">Send</Button>
         </Form>

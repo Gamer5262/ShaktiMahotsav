@@ -3,12 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import Img1 from '../assets/img5.avif';
 import Img2 from '../assets/img6.png';
 import Img3 from '../assets/img7.jpg';
-import Navbar from './Navbar';
 
 const Hero = () => {
   return (
     <div>
-      <Navbar />
       <div className='slides'>
         <Carousel >
           

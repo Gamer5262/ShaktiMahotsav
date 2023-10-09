@@ -2,6 +2,11 @@ import "./Event.css"
 import { useState } from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Navigation } from 'swiper/modules';
+import MediaQuery from 'react-responsive';
+
 
 const Button = ({changer}) => {
   function handleClick() {
@@ -96,39 +101,326 @@ const Event = ({ change }) => {
   function day_selected() {
     const selected_day = day_events[selected];
     return (  
-      <VerticalTimeline>
-        {
-          selected_day.map((event) => (
-            <VerticalTimelineElement
-              key={event[0]}
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff'}}
-              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-              date={event[0]}
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', height: '30px', width: '30px', marginLeft:'-15px'}}
-            >
-              <h4 className="vertical-timeline-element-title">{event[1]}</h4>
-              <p className="vertical-timeline-element-subtitle">{event[2]}</p>
-            </VerticalTimelineElement>
-          ))
-        }
-      </VerticalTimeline>
+      <div className="timeline">
+        <MediaQuery maxWidth={3000} minWidth={1163} >
+        <VerticalTimeline>
+          {
+            selected_day.map((event) => (
+              <VerticalTimelineElement
+                key={event[0]}
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: 'rgb(255,255,255,0.02)', color: '#fff'}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(255,255,255)' }}
+                date={event[0]}
+                iconStyle={{ background: '#ffffff', color: '#fff', height: '30px', width: '30px', marginLeft:'-15px'}}
+              >
+                <h4 className="vertical-timeline-element-title">{event[1]}</h4>
+                <p className="vertical-timeline-element-subtitle">{event[2]}</p>
+              </VerticalTimelineElement>
+            ))
+          }
+          </VerticalTimeline>
+        </MediaQuery>
+        <MediaQuery maxWidth={1163} minWidth={0} >
+        <VerticalTimeline>
+          {
+            selected_day.map((event) => (
+              <VerticalTimelineElement
+                key={event[0]}
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff'}}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date={event[0]}
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', height: '30px', width: '30px', marginLeft:'5px'}}
+              >
+                <h4 className="vertical-timeline-element-title">{event[1]}</h4>
+                <p className="vertical-timeline-element-subtitle">{event[2]}</p>
+              </VerticalTimelineElement>
+            ))
+          }
+          </VerticalTimeline>
+        </MediaQuery>
+      </div>
     )
   }
   return (
     <div className="container-event" id='events'>
       <div className="section-event">
         <div className="days-change">
-
-          {days.map((day) => (
-            <button
-              key={day}
-              className={selected === day ? " selected" : "btn-event"}
-              onClick={() => setSelected(day)}
-            >
-              {day}
-            </button>
-          ))}
+          <MediaQuery maxWidth={3000} minWidth={1025} >
+            <Swiper
+              navigation={true}
+              modules={[ Navigation]}
+              className="mySwiper"
+              slidesPerView={8}
+              >
+                <div className="mySwiper">
+                <SwiperSlide>
+                  <button
+                    className={selected === days[0] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[0])}
+                  >
+                    {days[0]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[1] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[1])}
+                  >
+                    {days[1]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[2] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[2])}
+                  >
+                    {days[2]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[3] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[3])}
+                  >
+                    {days[3]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[4] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[4])}
+                  >
+                    {days[4]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[5] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[5])}
+                  >
+                    {days[5]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[6] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[6])}
+                  >
+                    {days[6]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[7] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[7])}
+                  >
+                    {days[7]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[8] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[8])}
+                  >
+                    {days[8]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[9] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[9])}
+                  >
+                    {days[9]}
+                  </button>
+                  </SwiperSlide>
+                </div>
+            </Swiper>
+          </MediaQuery>
+          <MediaQuery maxWidth={1024}  minWidth={426}>
+            <Swiper
+              navigation={true}
+              modules={[ Navigation]}
+              className="mySwiper"
+              slidesPerView={5}
+              >
+                <div className="mySwiper">
+                <SwiperSlide>
+                  <button
+                    className={selected === days[0] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[0])}
+                  >
+                    {days[0]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[1] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[1])}
+                  >
+                    {days[1]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[2] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[2])}
+                  >
+                    {days[2]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[3] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[3])}
+                  >
+                    {days[3]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[4] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[4])}
+                  >
+                    {days[4]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[5] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[5])}
+                  >
+                    {days[5]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[6] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[6])}
+                  >
+                    {days[6]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[7] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[7])}
+                  >
+                    {days[7]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[8] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[8])}
+                  >
+                    {days[8]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[9] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[9])}
+                  >
+                    {days[9]}
+                  </button>
+                  </SwiperSlide>
+                </div>
+            </Swiper>
+          </MediaQuery>
+          <MediaQuery maxWidth={426} minWidth={0}>
+            <Swiper
+              navigation={true}
+              modules={[ Navigation]}
+              className="mySwiper"
+              slidesPerView={3}
+              >
+                <div className="mySwiper">
+                <SwiperSlide>
+                  <button
+                    className={selected === days[0] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[0])}
+                  >
+                    {days[0]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[1] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[1])}
+                  >
+                    {days[1]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[2] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[2])}
+                  >
+                    {days[2]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[3] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[3])}
+                  >
+                    {days[3]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[4] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[4])}
+                  >
+                    {days[4]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[5] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[5])}
+                  >
+                    {days[5]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[6] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[6])}
+                  >
+                    {days[6]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[7] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[7])}
+                  >
+                    {days[7]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[8] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[8])}
+                  >
+                    {days[8]}
+                  </button>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <button
+                    className={selected === days[9] ? " selected" : "btn-event"}
+                    onClick={() => setSelected(days[9])}
+                  >
+                    {days[9]}
+                  </button>
+                  </SwiperSlide>
+                </div>
+            </Swiper>
+          </MediaQuery>
+          
           
         </div>
         {

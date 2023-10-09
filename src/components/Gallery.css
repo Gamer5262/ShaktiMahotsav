@@ -1,23 +1,25 @@
-
-
 .gallery{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 98vw;
 }
-
 .section-gallery{
     width: 80vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    color: white;
     padding: 30px;
     border-radius: 15px;
     background-color: rgb(27, 27, 27, 0.8);
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.35);
 }
 .slides-img{
     width: 25vw;
     height: 40vh;
+    @media screen and (max-width: 1025px) and (min-width:426px) {
+        width: 40vw;
+        height: 40vh;
+    }
+    @media screen and (max-width: 425px) {
+        width: 80vw;
+        height: 50vh;
+    }
 }

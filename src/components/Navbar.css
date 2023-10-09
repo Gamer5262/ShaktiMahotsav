@@ -1,12 +1,12 @@
 :root {
-    --mainColor: #2195f343;
+    --mainColor: #000000a1;
     --mainColorLight: #5768aa4f;
     --secondaryColor: #db2b39;
-    --textColor: #eee;
+    --textColor: #ffffff;
 }
 
 .navbar{
-    z-index: 100;
+    z-index: 1000;
 }
 
 h3{
@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background-color: var(--mainColor);
+    background-color:  #0000007a;
     color: var(--textColor);
 }
 
