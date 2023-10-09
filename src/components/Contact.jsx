@@ -1,5 +1,9 @@
 /* import { useRef, useState } from "react"; */
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
+import axios from 'axios';
+import PropTypes from 'prop-types';
+
 
 const Section = styled.div`
   height: 100vh;
@@ -61,45 +65,65 @@ const Button = styled.button`
 `;
 
 
-const Contact = () => {
-  /* const ref = useRef();
-  const [success, setSuccess] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
- */
-    /* emailjs
-      .sendForm(
-        "service_id",
-        "template_id",
-        ref.current,
-        "public_key"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSuccess(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-        }
-      ); 
-      };
-    */
+function SuccessMessage() {
+  return (
+    alert("Your data has been successfully saved!")
+  );
+}
+
+function ErrorMessage(props) {
+  return (
+    <div className="error-message">
+      <p>{props.message}</p>
+    </div>
+  );
+}
+
+ErrorMessage.propTypes = {
+  message: PropTypes.string.isRequired,
+};
+
+const Contact = ({change}) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const Submit = async(event) => {
+    try {
+      const headers = {
+        'Access-Control-Allow-Origin' : 'http://localhost:5173',
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+      const response = await axios.post("http://localhost/Forms/contact.php", event, 
+      {headers: headers, 
+      maxBodyLength: 100,
+          maxContentLength: 100
+        });
+      console.log(response);
+      SuccessMessage();
+    } catch (error) {
+      console.error(error);
+      ErrorMessage("There was an error submitting your data.");
+    }
+  };
   
   return (
     <Section id="contact">
       <Container>
-        <Form  >
+        <Form onSubmit={handleSubmit(Submit)}>
             <Title>Suggestion</Title>
-            <Input placeholder="Name" name="name" />
-            <Input placeholder="Phone Number" name="phone_number" />
+            <Input placeholder="Name" {...register('name', { required: true })}/>
+            {errors.name && <span className="error">Name is required</span>}
+            <Input placeholder="Phone Number" {...register('phone', { required: true })}/>
+            {errors.phone && <span className="error">phone is required</span>}
             <TextArea
               placeholder="Write your message"
-              name="message"
               rows={7}
+              {...register('message', { required: true })}
             />
+            {errors.message && <span className="error">Name is required</span>}
             <Button type="submit">Send</Button>
         </Form>
         <footer>
