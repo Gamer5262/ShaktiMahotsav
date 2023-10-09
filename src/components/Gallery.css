@@ -3,24 +3,15 @@
     justify-content: center;
     align-items: center;
     width: 98vw;
-    margin: 40px 0px;
+    margin: 30px 0px;
 }
 .section-gallery{
     width: 80vw;
-    color: white;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: rgb(27, 27, 27, 0.8);
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 20px;
+    color: aliceblue;
 }
-.slides-img{
-    width: 21vw;
-    height: 40vh;
-    @media screen and (max-width: 1025px) and (min-width:426px) {
-        width: 40vw;
-        height: 40vh;
-    }
-    @media screen and (max-width: 435px) {
-        width: 80vw;
-        height: 50vh;
-    }
+.slider-images{
+    width: 20vw;       
 }
