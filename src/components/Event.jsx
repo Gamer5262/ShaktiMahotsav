@@ -29,20 +29,13 @@ const Event = ({ change }) => {
   }
   const featured_events = [
     ["Day 1", "11:00 AM", "Pallakotsavam and Vigraha Prathistha", "Description", img1],
-    ["Day 1", "6:30 PM", "Sahasra Deepa Aalankaraana", "Description", img4],
     ["Day 2", "6:30 PM", "Shakti Moolam Balley", "Description", img1],
     ["Day 3", "6:30 PM", "Statewise Cultural Dances", "Description", img2],
-    ["Day 4", "6:30 PM", "Sangītotsav", "Description",img1],
     ["Day 5", "6:30 PM", "Khel Mela", "Description",img2],
     ["Day 6", "6:30 PM", "Ten Team Games", "Description",img5],
     ["Day 7", "10:00 am", "Competitions", "Description",img3],
-    ["Day 7", "6:30 PM", "Housie", "Description",img2],
     ["Day 8", "10:00 AM", "Treasure Hunt", "Description",img5],
-    ["Day 8", "6:30 PM", "Bhagavati Seva", "Description",img1],
-    ["Day 9", "11:00 AM", "Ayudh Pooja", "Description",img4],
     ["Day 9", "6:30 PM", "Bathukamma", "Description",img5],
-    ["Day 10", "11:00 AM", "Nimarjan Pooja", "Description",img3],
-    ["Day 10", "3:00 PM", "Nimarjanam ", "Description",img4],
     ["Day 10", "7:30 PM", "Ravan Dahan", "Description",img2],
   ];
   const day_events = {
@@ -129,12 +122,13 @@ const Event = ({ change }) => {
                 <div className="box-img">
                 <img src={event[4]} className="" />
                 </div>
-                <div className="content">
+                <div className="box-content">
                 <h5>{event[2]}</h5>
-                <h7>{event[0]}</h7>
-                <br/>
-                <h7>{event[1]}</h7>
-                <br/>
+                <br></br>
+                <h6>{event[0]}</h6>
+                <br></br>
+                <h6>{event[1]}</h6>
+                <br></br>
                 <p>{event[3]}</p>
                 </div>
               </div>
@@ -148,7 +142,7 @@ const Event = ({ change }) => {
   return (
     <div className="container-event" id='events'>
       <div className="section-event">
-        <h2 className="h4">Featured Events</h2>
+        <h2>Featured Events</h2>
         {
             day_selected()
         }
