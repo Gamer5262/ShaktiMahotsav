@@ -38,7 +38,12 @@ const Form = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost/submit.php", event, 
+      for (let i=0;i < 11; i++){
+        if (event["day" + i.toString()] == ''){
+          event["day" + i.toString()] = 0;
+        }
+      }
+      const response = await axios.post("http://localhost/Form/submit.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
@@ -84,6 +89,7 @@ const Form = ({change}) => {
                 label="Email"
                 variant="outlined"
                 fullWidth
+                sx={{ input: { color: 'white' } }}
                 {...register('email', { required: true })}
               />
               {errors.email && <span className="error">Email is required</span>}

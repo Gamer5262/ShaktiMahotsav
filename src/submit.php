@@ -23,6 +23,8 @@ $email = mysqli_real_escape_string($conn, $data['email']);
 $phone = mysqli_real_escape_string($conn, $data['phoneNumber']);
 $roll = mysqli_real_escape_string($conn, $data['rollNumber']);
 
+echo $data;
+
 if (empty($name) || empty($email) || empty($phone) || empty($roll)) {
   echo 'Please fill in all fields.';
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

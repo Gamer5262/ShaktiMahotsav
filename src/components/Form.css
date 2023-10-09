@@ -40,8 +40,8 @@ form{
     padding: 5px 20px
 }
 .paper{
-    background-color: aliceblue;
-    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.438);
+    color: rgb(255, 255, 255);
     width: 60vw;
     padding: 20px;
     margin-top: 100px;
