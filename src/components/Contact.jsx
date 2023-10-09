@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const Section = styled.div`
   height: 100vh;
   width: 100%;
-
+  margin-top: 40px 0px;
   background-color: #1a1a1a;
   display: flex;
   justify-content: center;

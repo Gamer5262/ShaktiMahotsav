@@ -38,8 +38,8 @@ function Home() {
         <About />
         <Event change={toggleForm} />
         <Gallery />
-        <Team /> 
         <Contact />
+        <Team /> 
         <Footer/>
       </div>;
     }

@@ -45,11 +45,12 @@ header .nav-btn {
     font-size: 1.8rem;
 }
 
-header div,
+ header div,
 nav {
     display: flex;
     align-items: center;
-}
+    justify-content: right;
+} 
 
 @media only screen and (max-width: 768px) {
     header .nav-btn {
