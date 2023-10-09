@@ -10,6 +10,10 @@ import img2 from '../assets/img2.avif'
 import img3 from '../assets/img3.avif'
 import img4 from '../assets/img4.avif'
 import img5 from '../assets/img5.avif'
+import { useState } from "react";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import Form from './Form.jsx';
 
 
 const Button = ({changer}) => {
@@ -27,6 +31,7 @@ const Event = ({ change }) => {
   function click() {
     change();
   }
+
   const featured_events = [
     ["Day 1", "11:00 AM", "Pallakotsavam and Vigraha Prathistha", "Description", img1],
     ["Day 2", "6:30 PM", "Shakti Moolam Balley", "Description", img1],
@@ -38,6 +43,8 @@ const Event = ({ change }) => {
     ["Day 9", "6:30 PM", "Bathukamma", "Description",img5],
     ["Day 10", "7:30 PM", "Ravan Dahan", "Description",img2],
   ];
+  const [selected, setSelected] = useState("Day 1");
+  let days = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"];
   const day_events = {
     "Day 1": [
       ["11:00 AM","Pallakotsavam and Vigraha Prathistha","Description",img1],
@@ -139,7 +146,30 @@ const Event = ({ change }) => {
       </div>
     )
   }
-  return (
+  function days_change() {
+    const selected_day = day_events[selected];
+    return (  
+      <VerticalTimeline>
+        {
+          selected_day.map((event) => (
+            <VerticalTimelineElement
+              key={event[0]}
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff'}}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date={event[0]}
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' , width:"25px", height:"25px", marginLeft:"-12.5px", marginTop:"20px"}}
+              animate={true}
+            >
+              <h4 className="vertical-timeline-element-title">{event[1]}</h4>
+              <p className="vertical-timeline-element-subtitle">{event[2]}</p>
+            </VerticalTimelineElement>
+          ))
+        }
+      </VerticalTimeline>
+    )
+  }
+  return (<div>
     <div className="container-event" id='events'>
       <div className="section-event">
         <h2>Featured Events</h2>
@@ -151,6 +181,27 @@ const Event = ({ change }) => {
         </div>
       </div>
     </div>
+    <div className="container-event" id='events'>
+      <div className="section-event">
+        <div className="days-change">
+
+          {days.map((day) => (
+            <button
+              key={day}
+              className={selected === day ? " selected" : "btn-event"}
+              onClick={() => setSelected(day)}
+            >
+              {day}
+            </button>
+          ))}
+          
+        </div>
+        {
+            days_change()
+        }
+      </div>
+    </div>
+  </div>
   )
 }
 
