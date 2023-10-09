@@ -34,13 +34,13 @@ function App() {
           modules={[Autoplay, Pagination, Navigation]}
           slidesPerView={3}
         >
-          <SwiperSlide><img className="slider-images"src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
-          <SwiperSlide><img className="slider-images"src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image"src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
           </Swiper>
         </MediaQuery>
         <MediaQuery maxWidth={1024}  minWidth={450} >
@@ -57,13 +57,13 @@ function App() {
           modules={[Autoplay, Pagination, Navigation]}
           slidesPerView={2}
         >
-          <SwiperSlide><img className="slides-img" src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
           </Swiper>
         </MediaQuery>
         <MediaQuery maxWidth={449} minWidth={0} >
@@ -80,13 +80,13 @@ function App() {
           modules={[Autoplay, Pagination, Navigation]}
           slidesPerView={1}
         >
-          <SwiperSlide><img className="slides-img" src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
-          <SwiperSlide><img className="slides-img" src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_1} alt='slide_image_1'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_2} alt='slide_image_2'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_3} alt='slide_image_3'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
           </Swiper>
         </MediaQuery>
       </div>
