@@ -22,11 +22,42 @@
 }
 .social_links{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 20vw;
+    width: 80vw;
+    height: 25vh;
     margin-top: 20px;
 }
+
+.content-footer{
+    background-color: #000;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.instagram , .facebook, .twitter, .youtube {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: inherit;
+}
+.instagram  p, .facebook p, .twitter p, .youtube p{
+    margin-top: 1.5vh;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    width: 11vw;
+}
+
 .hr{
     width: 90vw;
     background-color: #fff;
