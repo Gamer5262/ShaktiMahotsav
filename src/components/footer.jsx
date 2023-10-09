@@ -7,7 +7,7 @@ import { Autoplay} from 'swiper/modules';
 import './Footer.css';
 import MediaQuery from 'react-responsive';
 
-import sponsor_1 from '../../public/sponsors/titan.png';
+import sponsor_1 from '../assets/sponsors/titan.png';
 
 function Footer() {
   return (
