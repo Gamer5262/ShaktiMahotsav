@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useLayoutEffect, useRef} from 'react'
 import Gallery from './Gallery'
 import Hero from './Hero'
 import Event from './Event'
@@ -6,7 +6,7 @@ import Contact from './Contact'
 import About from './About'
 import Team from './Team'
 import Footer from './Footer'
-import From from './Form'
+import Form from './Form'
 import './Home.css'
 import Navbar from './Navbar'
 import { useCallback } from "react";
@@ -15,25 +15,43 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
 function Home() {
-  const [formactive, setFormactive] = useState(false);
-  function toggleForm() {
-    setFormactive(!formactive);
-  }
+    const [height, setHeight] = useState(0);
+    const elementRef = useRef(null);
+    useLayoutEffect(() => {
+            const handleResize = () => {
+            setHeight(elementRef.current.offsetHeight);
+            };
+            handleResize();
+            window.addEventListener('resize', handleResize);
+
+            return () => {
+            window.removeEventListener('resize', handleResize);
+            }
+        }, []);
+    const [formactive, setFormactive] = useState(false);
+    function toggleForm() {
+        setFormactive(!formactive);
+    }
   function displayForm() {
     if (formactive) {
-      return <div className='pushup'>
-        <From change = {toggleForm}/>
-        <Hero />
-        <About />
-        <Event change = {toggleForm} />
-        <Gallery />
-        <Team /> 
-        <Contact />
-        <Footer/>
-      </div>;
+        return (
+        <div className='pushup'>
+          <Form change={toggleForm} />
+          <div className='darken' style={{height:{height}}}>
+          </div>
+          <div ref={elementRef}>
+                <Hero />
+                <About />
+                <Event change = {toggleForm} />
+                <Gallery />
+                <Team /> 
+                <Contact />
+                <Footer />
+           </div>
+      </div>);
     }
     else {
-      return <div className='pushup'>
+      return <div className='pushup' ref={elementRef}>
         <Hero />
         <About />
         <Event change={toggleForm} />
@@ -95,7 +113,7 @@ function Home() {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#fdbc1f",
                     },
                     move: {
                         direction: "none",
@@ -104,7 +122,7 @@ function Home() {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 0.5,
                         straight: false,
                     },
                     number: {
@@ -112,13 +130,13 @@ function Home() {
                             enable: true,
                             area: 800,
                         },
-                        value: 80,
+                        value: 100,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.3,
                     },
                     shape: {
-                        type: "circle",
+                        type: "triangle",
                     },
                     size: {
                         value: { min: 1, max: 5 },

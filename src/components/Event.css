@@ -36,7 +36,6 @@
     align-self: center;
     @media screen and (max-width: 768px) {
         width: 80vw;
-
     }
 }
 .btn-event{
@@ -72,16 +71,22 @@
 }
 .grid-container {
     display: grid;
-    gap: 40px 20px;
+    gap: 40px 10px;
     margin: 5px 5px ;
     grid-template-columns: auto auto auto auto auto;
     align-self: center;
     justify-items: center;
-    @media screen and (max-width: 1025px) and (min-width:426px) {
+    @media screen and (max-width: 1400px) and (min-width:1140px) {
+        grid-template-columns: auto auto auto auto;
+    }
+    @media screen and (max-width: 1140px) and (min-width:840px) {
             grid-template-columns: auto auto auto;
     }
-    @media screen and (max-width: 435px) {
-            grid-template-columns: auto auto;
+    @media screen and (max-width: 840px) and (min-width:630px) {
+          grid-template-columns: auto auto ;
+    }
+    @media screen and (max-width: 630px) {
+            grid-template-columns: auto ;
     }
 }
 .box {
@@ -106,8 +111,8 @@
 }
 
 .box .box-img img {
-    width: 250px;
-    height: 380px;
+    width: 220px;
+    height: 280px;
     border: 2px solid #000;
     border-radius: 10px;
 }

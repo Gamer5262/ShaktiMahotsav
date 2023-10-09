@@ -19,6 +19,7 @@ import Form from './Form.jsx';
 const Button = ({changer}) => {
   function handleClick() {
     changer();
+    window.scrollTo(0, 0);
   }
   return (
     <div className="btn-form" onClick={handleClick}>

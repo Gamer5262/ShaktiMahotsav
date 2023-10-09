@@ -56,10 +56,10 @@ const Form = ({change}) => {
         <div className="close-btn" onClick={toggleForm}>
             X
         </div>
-      <Paper elevation={3} className="paper" style={{ maxWidth: "70vw", minWidth: "60vw", padding: "50px", color: "#fff" }}>
-        <Typography variant="h5" className="title">
+      <div elevation={3} className="paper" >
+        <h4 className="title">
           Register
-        </Typography>
+        </h4>
         <form onSubmit={handleSubmit(Submit)}>
             <div className="input">
               <TextField
@@ -115,7 +115,7 @@ const Form = ({change}) => {
             Submit
           </Button>
         </form>
-        </Paper>
+        </div>
         </div>
     </div>
   );
