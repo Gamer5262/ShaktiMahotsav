@@ -9,7 +9,7 @@ const Section = styled.div`
   height: 100vh;
   width: 100%;
   margin-top: 40px 0px;
-  background-color: #1a1a1a;
+  background-color: #1a1a1ae1;
   display: flex;
   justify-content: center;
   align-items: center;

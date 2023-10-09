@@ -23,7 +23,7 @@ ErrorMessage.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-const Form = ({change}) => {
+const FormAbout = ({change}) => {
   function toggleForm() {
     change();
   }
@@ -38,12 +38,7 @@ const Form = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      for (let i=0;i < 11; i++){
-        if (event["day" + i.toString()] == ''){
-          event["day" + i.toString()] = 0;
-        }
-      }
-      const response = await axios.post("http://localhost/Form/submit.php", event, 
+      const response = await axios.post("http://localhost/submit.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
@@ -89,7 +84,6 @@ const Form = ({change}) => {
                 label="Email"
                 variant="outlined"
                 fullWidth
-                sx={{ input: { color: 'white' } }}
                 {...register('email', { required: true })}
               />
               {errors.email && <span className="error">Email is required</span>}
@@ -105,16 +99,11 @@ const Form = ({change}) => {
             </div>
           <div className="checkboxes">
             <FormGroup>
-              <FormControlLabel control={<Checkbox />} label="Day 1" {...register('day1')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 2" {...register('day2')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 3" {...register('day3')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 4" {...register('day4')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 5" {...register('day5')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 6" {...register('day6')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 7" {...register('day7')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 8" {...register('day8')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 9" {...register('day9')}/>
-              <FormControlLabel control={<Checkbox />} label="Day 10" {...register('day10')}/>
+              <FormControlLabel control={<Checkbox />} label="Garba/Dandiya" {...register('Garba/Dandiya')}/>
+              <FormControlLabel control={<Checkbox />} label="Disciplinary commitee" {...register('Disciplinary commitee')}/>
+              <FormControlLabel control={<Checkbox />} label="Volunteer" {...register('Volunteer')}/>
+              <FormControlLabel control={<Checkbox />} label="Lalita Sahasra Nama" {...register('Lalita Sahasra Nama')}/>
+              <FormControlLabel control={<Checkbox />} label="Another responsibility" {...register('Another responsibility')}/>
             </FormGroup>
           </div>
           <Button variant="contained" style={{marginTop :"20px"}} type="submit" className="btn">
@@ -127,4 +116,4 @@ const Form = ({change}) => {
   );
 };
 
-export default Form;
+export default FormAbout;

@@ -13,9 +13,10 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
+import FormAbout from './FormAbout';
 
 function Home() {
-    const [height, setHeight] = useState(0);
+    const [height, setHeight] = useState(1);
     const elementRef = useRef(null);
     useLayoutEffect(() => {
             const handleResize = () => {
@@ -29,19 +30,36 @@ function Home() {
             }
         }, []);
     const [formactive, setFormactive] = useState(false);
+    const [formType, setForm] = useState("");
     function toggleForm() {
         setFormactive(!formactive);
     }
+    function toggleFormTypeEvent() {
+        setForm("event");
+    }
+    function toggleFormTypeAbout() {
+        setForm("about");
+    }
+    function chooseForm() {
+        if (formType === "about") {
+            return <FormAbout change={toggleForm} />
+        }
+        else {
+            return <Form change={toggleForm} />
+        }
+        
+    }
+
   function displayForm() {
     if (formactive) {
         return (
         <div className='pushup'>
-          <Form change={toggleForm} />
-          <div className='darken' style={{height:{height}}}>
-          </div>
+            <div className='darken' style={{ height: { height } }}>
+                {chooseForm()}
+            </div>
           <div ref={elementRef}>
                 <Hero />
-                <About />
+                <About formtype = {toggleFormType} />
                 <Event change = {toggleForm} />
                 <Gallery />
                 <Team /> 
@@ -55,9 +73,9 @@ function Home() {
         <Hero />
         <About />
         <Event change={toggleForm} />
-        <Gallery />
+          <Gallery />
+          <Team /> 
         <Contact />
-        <Team /> 
         <Footer/>
       </div>;
     }
@@ -106,7 +124,7 @@ function Home() {
                             quantity: 4,
                         },
                         repulse: {
-                            distance: 100,
+                            distance: 150,
                             duration: 0.4,
                         },
                     },
@@ -133,7 +151,7 @@ function Home() {
                         value: 300,
                     },
                     opacity: {
-                        value: 0.3,
+                        value: 1,
                     },
                     shape: {
                         type: "triangle",
