@@ -11,3 +11,10 @@
 .pushup{
     margin-top: -80px;
 }
+.darken{
+    background-color: rgba(0, 0, 0, 0.826);
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}

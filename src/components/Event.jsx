@@ -15,6 +15,7 @@ import img5 from '../assets/img5.avif'
 const Button = ({changer}) => {
   function handleClick() {
     changer();
+    window.scrollTo(0, 0);
   }
   return (
     <div className="btn-form" onClick={handleClick}>
