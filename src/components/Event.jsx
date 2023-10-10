@@ -10,6 +10,7 @@ import img2 from '../assets/img2.avif'
 import img3 from '../assets/img3.avif'
 import img4 from '../assets/img4.avif'
 import img5 from '../assets/img5.avif'
+import ravan from '../assets/Event/Ravan Dahan.jpg'
 import { useState } from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -42,7 +43,7 @@ const Event = ({ change }) => {
     ["Day 6", "20th Oct","10:00 am","Venue", "Competitions", "Description",img3],
     ["Day 7", "21st Oct","10:00 AM", "Venue","Treasure Hunt", "Description",img5],
     ["Day 8", "22nd Oct","6:30 PM", "Venue","Bathukamma", "Description",img5],
-    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Description",img2],
+    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Description",ravan],
   ];
   function day_selected() {
     return (  

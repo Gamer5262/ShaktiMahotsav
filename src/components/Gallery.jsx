@@ -1,10 +1,17 @@
-import slide_image_1 from '../assets/img1.avif' ;
-import slide_image_2 from '../assets/img2.avif';
-import slide_image_3 from '../assets/img3.avif';
-import slide_image_4 from '../assets/img4.avif';
-import slide_image_5 from '../assets/img5.avif';
-import slide_image_6 from '../assets/img6.png';
-import slide_image_7 from '../assets/img7.jpg';
+import slide_image_1 from '../assets/gallery/img1.jpg';
+import slide_image_2 from '../assets/gallery/img2.jpg';
+import slide_image_3 from '../assets/gallery/img3.jpg';
+import slide_image_4 from '../assets/gallery/img4.jpg';
+import slide_image_5 from '../assets/gallery/img5.jpg';
+import slide_image_6 from '../assets/gallery/img6.jpg';
+import slide_image_7 from '../assets/gallery/img7.jpg';
+import slide_image_8 from '../assets/gallery/img8.jpg';
+import slide_image_9 from '../assets/gallery/img9.jpg';
+import slide_image_10 from '../assets/gallery/img10.jpg';
+import slide_image_11 from '../assets/gallery/img11.jpg';
+import slide_image_12 from '../assets/gallery/img12.jpg';
+import slide_image_13 from '../assets/gallery/img13.jpg';
+
 import './Gallery.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,7 +47,13 @@ function App() {
           <SwiperSlide><img className="slider-image"src={slide_image_4} alt='slide_image_4'/></SwiperSlide>
           <SwiperSlide><img className="slider-image"src={slide_image_5} alt='slide_image_5'/></SwiperSlide>
           <SwiperSlide><img className="slider-image"src={slide_image_6} alt='slide_image_6'/></SwiperSlide>
-          <SwiperSlide><img className="slider-image"src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_7} alt='slide_image_7' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_8} alt='slide_image_8' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_9} alt='slide_image_9' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_10} alt='slide_image_10' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_11} alt='slide_image_11' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_12} alt='slide_image_12' /></SwiperSlide>
+          <SwiperSlide><img className="slider-image" src={slide_image_13} alt='slide_image_13' /></SwiperSlide>
           </Swiper>
         </MediaQuery>
         <MediaQuery maxWidth={1024}  minWidth={450} >
