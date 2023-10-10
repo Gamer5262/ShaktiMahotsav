@@ -77,7 +77,7 @@ const Event = ({ change }) => {
   return (
     <div className="container-event" id='events'>
       <div className="section-event">
-        <h2>Featured Events</h2>
+        <h2 style={{fontFamily: "Signika Negative, sans-serif"}}>Featured Events</h2>
         {
             day_selected()
         }

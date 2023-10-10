@@ -38,7 +38,7 @@ const FormAbout = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost:8082/team.php", event, 
+      const response = await axios.post("http://shaktimahotsav.ch.amrita.edu/php/team.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100

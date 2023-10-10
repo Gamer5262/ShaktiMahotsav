@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='gallery' id='gallery'>
       <div className='section-gallery'>
-        <h4>Gallery</h4>
+        <h4 style={{fontFamily: "Signika Negative, sans-serif"}}>Gallery</h4>
         <MediaQuery maxWidth={3000} minWidth={1025} >
         <Swiper
           spaceBetween={30}

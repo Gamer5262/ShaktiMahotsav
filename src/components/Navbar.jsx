@@ -16,7 +16,7 @@ function Navbar() {
 		<header className="navbar">
 			<MediaQuery minWidth={768}>
 				<h3>Shakthimahotsav</h3>
-				<nav ref={navRef}>
+				<nav ref={navRef} >
 					<a href="#">Home</a>
 					<a href="#about">About</a>
 					<a href="#events">Events</a>

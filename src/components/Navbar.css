@@ -7,6 +7,7 @@
 
 .navbar{
     z-index: 1000;
+    
 }
 
 h3{
@@ -27,6 +28,7 @@ nav a {
     margin: 0 1rem;
     color: var(--textColor);
     text-decoration: none;
+    font-family: "Gabarito", cursive;
 }
 
 nav a:hover {

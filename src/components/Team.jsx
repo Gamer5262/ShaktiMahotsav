@@ -4,7 +4,7 @@ const Team = () => {
   return (
     <div className="container-team" id='team'>
       <div className="section-team">
-        <h4>Meet our Fabulous Team</h4>
+        <h4 style={{fontFamily: "Signika Negative, sans-serif"}}>Meet our Fabulous Team</h4>
         <div className="row-team">
           <div className="column1">
             <h4>Team 1</h4>

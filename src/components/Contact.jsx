@@ -112,7 +112,7 @@ const Contact = ({change}) => {
     <Section id="contact">
       <Container>
         <Form onSubmit={handleSubmit(Submit)}>
-            <Title>Suggestion</Title>
+            <Title style={{fontFamily: "Signika Negative, sans-serif"}}>Suggestion</Title>
             <Input placeholder="Name" {...register('name', { required: true })}/>
             {errors.name && <span className="error">Name is required</span>}
             <Input placeholder="Phone Number" {...register('phone', { required: true })}/>
