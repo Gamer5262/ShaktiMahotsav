@@ -99,11 +99,11 @@ const FormAbout = ({change}) => {
             </div>
           <div className="checkboxes">
             <FormGroup>
-              <FormControlLabel control={<Checkbox />} label="Garba/Dandiya" {...register('Garba/Dandiya')}/>
-              <FormControlLabel control={<Checkbox />} label="Disciplinary commitee" {...register('Disciplinary commitee')}/>
-              <FormControlLabel control={<Checkbox />} label="Volunteer" {...register('Volunteer')}/>
-              <FormControlLabel control={<Checkbox />} label="Lalita Sahasra Nama" {...register('Lalita Sahasra Nama')}/>
-              <FormControlLabel control={<Checkbox />} label="Another responsibility" {...register('Another responsibility')}/>
+              <FormControlLabel control={<Checkbox />} label="Garba / Dandiya" {...register('Garba / Dandiya')}/>
+              <FormControlLabel control={<Checkbox />} label="Lalita Sahasranama" {...register('Lalita Sahasranama')}/>
+              <FormControlLabel control={<Checkbox />} label="Discipline Commitee" {...register('Discipline Commitee')}/>
+              <FormControlLabel control={<Checkbox />} label="Volutneers" {...register('Volutneers')}/>
+              <FormControlLabel control={<Checkbox />} label="Another one idk" {...register('Another one idk')}/>
             </FormGroup>
           </div>
           <Button variant="contained" style={{marginTop :"20px"}} type="submit" className="btn">
@@ -117,3 +117,4 @@ const FormAbout = ({change}) => {
 };
 
 export default FormAbout;
+

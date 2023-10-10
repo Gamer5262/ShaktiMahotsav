@@ -1,7 +1,7 @@
 import "./About.css";
 import img1 from "../assets/img3.avif";
 
-const Button = ({ changes }) => {
+const Button = ({changes }) => {
   function handleClick() {
     changes();
     window.scrollTo(0, 0);
@@ -13,7 +13,7 @@ const Button = ({ changes }) => {
   )
 };
 
-function About({ formtype }) {
+function About({ change }) {
   return (
     <div className='about' id='about'>
       <div className='section-about'>
@@ -26,7 +26,7 @@ function About({ formtype }) {
            </p>
         <img src={img1} className="logo"></img>
         </div>
-        <Button changes={formtype} />
+        <Button changes={change} />
       </div>
     </div>
   )
