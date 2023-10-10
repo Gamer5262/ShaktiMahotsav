@@ -60,6 +60,15 @@ const Team = () => {
             <h6>Lorem Ipsum</h6>
             <h6>Lorem Ipsum</h6>
           </div>
+          <div className="column7">
+            <h4>Team 7</h4>
+            <h6>Lorem Ipsum</h6>
+            <h6>Lorem Ipsum</h6>
+            <h6>Lorem Ipsum</h6>
+            <h6>Lorem Ipsum</h6>
+            <h6>Lorem Ipsum</h6>
+            <h6>Lorem Ipsum</h6>
+          </div>
         </div>
       </div>
     </div>
