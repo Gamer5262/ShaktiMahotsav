@@ -102,6 +102,8 @@ const Contact = ({change}) => {
         });
       console.log(response);
       SuccessMessage();
+      var form = document.getElementById("ContactForm");
+      form.reset();
     } catch (error) {
       console.error(error);
       ErrorMessage("There was an error submitting your data.");
@@ -111,18 +113,26 @@ const Contact = ({change}) => {
   return (
     <Section id="contact">
       <Container>
-        <Form onSubmit={handleSubmit(Submit)}>
+        <Form onSubmit={handleSubmit(Submit)} id="ContactForm">
             <Title>Suggestion</Title>
             <Input placeholder="Name" {...register('name', { required: true })}/>
             {errors.name && <span className="error">Name is required</span>}
-            <Input placeholder="Phone Number" {...register('phone', { required: true })}/>
-            {errors.phone && <span className="error">phone is required</span>}
+            <Input placeholder="Phone Number" {...register('phone', { required: "Phone Number is required", validate:{
+                  maxLength: (v) =>
+    v.length <= 10 || "The Phone number should have 10 digits",
+    minLength: (v) =>
+    v.length >= 10 || "The Phone number should have 10 digits",
+                } })}
+              />
+              {errors.phone?.message && (
+    <small>{errors.phone.message}</small>
+  )}
             <TextArea
               placeholder="Write your message"
               rows={7}
               {...register('message', { required: true })}
             />
-            {errors.message && <span className="error">Name is required</span>}
+            {errors.message && <small className="error">Message is required</small>}
             <Button type="submit">Send</Button>
         </Form>
         <footer>

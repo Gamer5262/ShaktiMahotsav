@@ -38,13 +38,21 @@ const FormAbout = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost:8082/team.php", event, 
+
+      for (let i=0;i < 11; i++){
+        if (event["Check" + i.toString()] == ''){
+          event["Check" + i.toString()] = 0;
+        }
+      }
+
+      const response = await axios.post("http://shaktimahotsav.ch.amrita.edu/php/team.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
         });
       console.log(response);
       SuccessMessage();
+      toggleForm();
     } catch (error) {
       console.error(error);
       ErrorMessage("There was an error submitting your data.");
@@ -75,35 +83,58 @@ const FormAbout = ({change}) => {
                 label="Roll Number"
                 variant="outlined"
                 fullWidth
-                {...register('rollNumber', { required: true })}
+                {...register('rollNumber', { required: true , validate:{
+                  minLength: (v) => v.length >= 5,
+                  matchPattern: (v) => /^CH.EN.U4+/.test(v),
+                }})}
               />
-              {errors.rollNumber && <span className="error">Roll Number is required</span>}
+              {errors.rollNumber?.type === "required" && (
+    <small>Roll Number is required</small>
+  )}
+              {errors.rollNumber?.type === "matchPattern" && (
+    <small>Username should start with CH.EN.U4...</small>
+  )}
             </div>
           <div className="input">
               <TextField
                 label="Email"
                 variant="outlined"
                 fullWidth
-                {...register('email', { required: true })}
+                {...register('email', { required: "Email is required" , validate: {
+                  maxLength: (v) =>
+                    v.length <= 50 || "The email should have at most 50 characters",
+                  matchPattern: (v) =>
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+                    "Email address must be a valid address",
+                }})}
               />
-              {errors.email && <span className="error">Email is required</span>}
+              {errors.email?.message && (
+    <small>{errors.email.message}</small>
+  )}
             </div>
             <div className="input">
               <TextField
                 label="Phone Number"
                 variant="outlined"
                 fullWidth
-                {...register('phoneNumber', { required: true })}
+                {...register('phoneNumber', { required: "Phone Number is required", validate:{
+                  maxLength: (v) =>
+    v.length <= 10 || "The Phone number should have 10 digits",
+    minLength: (v) =>
+    v.length >= 10 || "The Phone number should have 10 digits",
+                } })}
               />
-              {errors.phoneNumber && <span className="error">Phone Number is required</span>}
+              {errors.phoneNumber?.message && (
+    <small>{errors.phoneNumber.message}</small>
+  )}
             </div>
           <div className="checkboxes">
             <FormGroup>
-              <FormControlLabel control={<Checkbox />} label="Garba / Dandiya" {...register('Garba / Dandiya')}/>
-              <FormControlLabel control={<Checkbox />} label="Lalita Sahasranama" {...register('Lalita Sahasranama')}/>
-              <FormControlLabel control={<Checkbox />} label="Discipline Commitee" {...register('Discipline Commitee')}/>
-              <FormControlLabel control={<Checkbox />} label="Volutneers" {...register('Volutneers')}/>
-              <FormControlLabel control={<Checkbox />} label="Another one idk" {...register('Another one idk')}/>
+              <FormControlLabel control={<Checkbox />} label="Garba / Dandiya" {...register('Check1')}/>
+              <FormControlLabel control={<Checkbox />} label="Lalita Sahasranama" {...register('Check2')}/>
+              <FormControlLabel control={<Checkbox />} label="Discipline Commitee" {...register('Check3')}/>
+              <FormControlLabel control={<Checkbox />} label="Volutneers" {...register('Check4')}/>
+              <FormControlLabel control={<Checkbox />} label="Another one idk" {...register('Check5')}/>
             </FormGroup>
           </div>
           <Button variant="contained" style={{marginTop :"20px"}} type="submit" className="btn">
