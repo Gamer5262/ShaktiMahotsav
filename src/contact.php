@@ -27,7 +27,7 @@ $phone = mysqli_real_escape_string($conn, $data['phone']);
 if (empty($name) || empty($phone) || empty($message)) {
   echo 'Please fill in all fields.';
 } else {
-  $query = "INSERT INTO feedback (name,phone,message) VALUES ('$name','$phone','$message')";
+  $query = "INSERT INTO feedback (name,email,message) VALUES ('$name','$phone','$message')";
   echo $query;
 
   if (mysqli_query($conn, $query)) {

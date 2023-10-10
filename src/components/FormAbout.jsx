@@ -38,7 +38,14 @@ const FormAbout = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost/submit.php", event, 
+
+      for (let i=0;i < 11; i++){
+        if (event["Check" + i.toString()] == ''){
+          event["Check" + i.toString()] = 0;
+        }
+      }
+
+      const response = await axios.post("http://localhost/Form/team.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
@@ -99,11 +106,11 @@ const FormAbout = ({change}) => {
             </div>
           <div className="checkboxes">
             <FormGroup>
-              <FormControlLabel control={<Checkbox />} label="Garba / Dandiya" {...register('Garba / Dandiya')}/>
-              <FormControlLabel control={<Checkbox />} label="Lalita Sahasranama" {...register('Lalita Sahasranama')}/>
-              <FormControlLabel control={<Checkbox />} label="Discipline Commitee" {...register('Discipline Commitee')}/>
-              <FormControlLabel control={<Checkbox />} label="Volutneers" {...register('Volutneers')}/>
-              <FormControlLabel control={<Checkbox />} label="Another one idk" {...register('Another one idk')}/>
+              <FormControlLabel control={<Checkbox />} label="Garba / Dandiya" {...register('Check1')}/>
+              <FormControlLabel control={<Checkbox />} label="Lalita Sahasranama" {...register('Check2')}/>
+              <FormControlLabel control={<Checkbox />} label="Discipline Commitee" {...register('Check3')}/>
+              <FormControlLabel control={<Checkbox />} label="Volutneers" {...register('Check4')}/>
+              <FormControlLabel control={<Checkbox />} label="Another one idk" {...register('Check5')}/>
             </FormGroup>
           </div>
           <Button variant="contained" style={{marginTop :"20px"}} type="submit" className="btn">

@@ -23,16 +23,11 @@ $name = mysqli_real_escape_string($conn, $data['name']);
 $email = mysqli_real_escape_string($conn, $data['email']);
 $phone = mysqli_real_escape_string($conn, $data['phoneNumber']);
 $roll = mysqli_real_escape_string($conn, $data['rollNumber']);
-$day1 = mysqli_real_escape_string($conn, $data['day1']);
-$day2 = mysqli_real_escape_string($conn, $data['day2']);
-$day3 = mysqli_real_escape_string($conn, $data['day3']);
-$day4 = mysqli_real_escape_string($conn, $data['day4']);
-$day5 = mysqli_real_escape_string($conn, $data['day5']);
-$day6 = mysqli_real_escape_string($conn, $data['day6']);
-$day7 = mysqli_real_escape_string($conn, $data['day7']);
-$day8 = mysqli_real_escape_string($conn, $data['day8']);
-$day9 = mysqli_real_escape_string($conn, $data['day9']);
-$day10 = mysqli_real_escape_string($conn, $data['day10']);
+$check1 = mysqli_real_escape_string($conn, $data['Check1']);
+$check2 = mysqli_real_escape_string($conn, $data['Check2']);
+$check3 = mysqli_real_escape_string($conn, $data['Check3']);
+$check4 = mysqli_real_escape_string($conn, $data['Check4']);
+$check5 = mysqli_real_escape_string($conn, $data['Check5']);
 
 
 if (empty($name) || empty($email) || empty($phone) || empty($roll)) {
@@ -40,8 +35,8 @@ if (empty($name) || empty($email) || empty($phone) || empty($roll)) {
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   echo 'Invalid email format.';
 } else {
-  $query = "INSERT INTO responses (name,email,phone,roll,day1,day2,day3,day4,day5,day6,day7,day8,day9,day10) 
-  VALUES ('$name','$email','$phone','$roll','$day1','$day2','$day3','$day4','$day5','$day6','$day7','$day8','$day9','$day10')";
+  $query = "INSERT INTO team (name,email,phone,roll,check1,check2,check3,check4,check5) 
+  VALUES ('$name','$email','$phone','$roll','$check1','$check2','$check3','$check4','$check5')";
   echo $query;
 
   if (mysqli_query($conn, $query)) {

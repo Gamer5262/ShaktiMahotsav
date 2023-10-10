@@ -102,6 +102,8 @@ const Contact = ({change}) => {
         });
       console.log(response);
       SuccessMessage();
+      var form = document.getElementById("ContactForm");
+      form.reset();
     } catch (error) {
       console.error(error);
       ErrorMessage("There was an error submitting your data.");
@@ -111,7 +113,7 @@ const Contact = ({change}) => {
   return (
     <Section id="contact">
       <Container>
-        <Form onSubmit={handleSubmit(Submit)}>
+        <Form onSubmit={handleSubmit(Submit)} id="ContactForm">
             <Title>Suggestion</Title>
             <Input placeholder="Name" {...register('name', { required: true })}/>
             {errors.name && <span className="error">Name is required</span>}

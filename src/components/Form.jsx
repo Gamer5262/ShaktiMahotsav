@@ -50,6 +50,8 @@ const Form = ({change}) => {
         });
       console.log(response);
       SuccessMessage();
+      var form = document.getElementsByClassName("form");
+      form.reset();
     } catch (error) {
       console.error(error);
       ErrorMessage("There was an error submitting your data.");
