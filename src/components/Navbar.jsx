@@ -22,7 +22,7 @@ function Navbar() {
 					<a href="#events">Events</a>
 					<a href="#gallery">Gallery</a>
 					<a href="#team">Team</a>
-					<a href="#contact">Contact</a>
+					<a href="#contact">Suggestions</a>
 					<button
 						className="nav-btn nav-close-btn"
 						onClick={showNavbar}>
