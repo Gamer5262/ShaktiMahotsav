@@ -78,7 +78,7 @@ function Footer() {
       <hr className='hr' />
       <div className='row2-footer'>
         <br/>
-        <h4 style={{fontFamily: "Dosis, sans-serif"}}>Made with 🫀 by Shaktimahotsav Team</h4>
+        <h4 style={{fontFamily: "Dosis, sans-serif"}}>Made with 🫀 by Shaktimahotsav Team🔱</h4>
         <div className='social_links'>
           <div>
             <img src={logo_amrita} alt='amrita logo' className='amrita_logo'/>
