@@ -93,10 +93,9 @@ const Contact = ({change}) => {
   const Submit = async(event) => {
     try {
       const headers = {
-        'Access-Control-Allow-Origin' : 'http://localhost:5173',
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost/Forms/contact.php", event, 
+      const response = await axios.post("http://localhost/Form/contact.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100

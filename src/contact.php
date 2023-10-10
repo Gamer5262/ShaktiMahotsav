@@ -10,7 +10,7 @@ $db_name = 'Navratri';
 $data = json_decode(file_get_contents("php://input"), true);
 echo $data;
 echo $_POST;
-/*
+
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (!$conn) {
@@ -21,16 +21,13 @@ else{
 }
 
 $name = mysqli_real_escape_string($conn, $data['name']);
-$email = mysqli_real_escape_string($conn, $data['email']);
-$phone = mysqli_real_escape_string($conn, $data['phoneNumber']);
-$roll = mysqli_real_escape_string($conn, $data['rollNumber']);
+$message = mysqli_real_escape_string($conn, $data['message']);
+$phone = mysqli_real_escape_string($conn, $data['phone']);
 
-if (empty($name) || empty($email) || empty($phone) || empty($roll)) {
+if (empty($name) || empty($phone) || empty($message)) {
   echo 'Please fill in all fields.';
-} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  echo 'Invalid email format.';
 } else {
-  $query = "INSERT INTO responses (name,email,phone,roll) VALUES ('$name','$email','$phone','$roll')";
+  $query = "INSERT INTO feedback (name,phone,message) VALUES ('$name','$phone','$message')";
   echo $query;
 
   if (mysqli_query($conn, $query)) {
@@ -41,5 +38,5 @@ if (empty($name) || empty($email) || empty($phone) || empty($roll)) {
 }
 
 mysqli_close($conn);
-*/
+
 ?>
