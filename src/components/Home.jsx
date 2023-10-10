@@ -14,6 +14,7 @@ import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
 import FormAbout from './FormAbout';
+import { set } from 'react-hook-form'
 
 function Home() {
     const [height, setHeight] = useState(1);
@@ -29,38 +30,36 @@ function Home() {
             window.removeEventListener('resize', handleResize);
             }
         }, []);
-    const [formactive, setFormactive] = useState(false);
-    const [formType, setForm] = useState("");
-    function toggleForm() {
-        setFormactive(!formactive);
+    const [form, setForm] = useState(false);
+    const [formAbout, setFormAbout] = useState(false);
+    const [formEvent, setFormEvent] = useState(false);
+    
+    function toggleForm()
+    {
+        setForm(!form)
     }
-    function toggleFormTypeEvent() {
-        setForm("event");
+    function toggleFormAbout() {
+        toggleForm();
+        setFormAbout(!formAbout);
+        setFormEvent(false);
     }
-    function toggleFormTypeAbout() {
-        setForm("about");
+    function toggleFormEvent() {
+        toggleForm();
+        setFormEvent(!formEvent);
+        setFormAbout(false);
     }
-    function chooseForm() {
-        if (formType === "about") {
-            return <FormAbout change={toggleForm} />
-        }
-        else {
-            return <Form change={toggleForm} />
-        }
-        
-    }
-
   function displayForm() {
-    if (formactive) {
+    if (form) {
         return (
         <div className='pushup'>
             <div className='darken' style={{ height: { height } }}>
-                {chooseForm()}
+                    {formAbout && <FormAbout change={toggleFormAbout}/>}
+                    {formEvent && <Form change={toggleFormAbout}/>}
             </div>
           <div ref={elementRef}>
                 <Hero />
-                <About formtype = {toggleFormType} />
-                <Event change = {toggleForm} />
+                <About change={toggleFormAbout} />
+                <Event change={toggleFormEvent} />
                 <Gallery />
                 <Team /> 
                 <Contact />
@@ -71,10 +70,10 @@ function Home() {
     else {
       return <div className='pushup' ref={elementRef}>
         <Hero />
-        <About />
-        <Event change={toggleForm} />
-          <Gallery />
-          <Team /> 
+        <About change={toggleFormAbout}/>
+        <Event change={toggleFormEvent} />
+        <Gallery />
+        <Team /> 
         <Contact />
         <Footer/>
       </div>;
