@@ -1,5 +1,5 @@
 import "./About.css";
-import img1 from "../assets/img3.avif";
+import img1 from "../assets/about.png";
 
 const Button = ({changes }) => {
   function handleClick() {
@@ -19,10 +19,8 @@ function About({ change }) {
       <div className='section-about'>
         <h4>Navratri</h4>
         <div className="content">
-        <p>
-          Celebrating the victory of good over evil.
-
-          Something something...
+        <p className="para">
+          Navaratri is a major Hindu festival lasting nine nights and ten days, celebrating the goddess Durga in her various forms. It signifies the victory of good over evil and includes fasting, prayer, and dance performances like Garba and Dandiya.
            </p>
         <img src={img1} className="logo"></img>
         </div>

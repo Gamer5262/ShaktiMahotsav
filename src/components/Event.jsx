@@ -1,20 +1,13 @@
 import "./Event.css"
-/* import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { Swiper, SwiperSlide } from 'swiper/react'; 
-import 'swiper/css'; */
-/* import { Navigation } from 'swiper/modules';
-import MediaQuery from 'react-responsive'; */
-import img1 from '../assets/img1.avif'
-import img2 from '../assets/img2.avif'
-import img3 from '../assets/img3.avif'
-import img4 from '../assets/img4.avif'
-import img5 from '../assets/img5.avif'
 import ravan from '../assets/Event/Ravan Dahan.jpg'
-import { useState } from "react";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import Form from './Form.jsx';
+import bathukamma from '../assets/Event/Bathukamma.jpg'
+import Treasure from '../assets/Event/Treasure Hunt.jpg'
+import pallakotsavam from '../assets/Event/pallakotsavam.jpeg'
+import dances from '../assets/Event/Dances.jpg'
+import khel from '../assets/Event/khel.jpg'
+import team from '../assets/Event/team-games.png'
+import compete from '../assets/Event/competitions.png'
+import img1 from '../assets/img1.avif'
 
 
 const Button = ({changer}) => {
@@ -35,15 +28,15 @@ const Event = ({ change }) => {
   }
 
   const featured_events = [
-    ["Day 1", "15th Oct", "11:00 AM","Venue", "Pallakotsavam and Vigraha Prathistha", "Description", img1],
-    ["Day 2", "16th Oct", "6:30 PM","Venue", "Shakti Moolam Balley", "Description", img1],
-    ["Day 3", "17th Oct","6:30 PM", "Venue","Statewise Cultural Dances", "Description", img2],
-    ["Day 4", "18th Oct","6:30 PM","Venue", "Khel Mela", "Description",img2],
-    ["Day 5", "19th Oct","6:30 PM","Venue", "Ten Team Games", "Description",img5],
-    ["Day 6", "20th Oct","10:00 am","Venue", "Competitions", "Description",img3],
-    ["Day 7", "21st Oct","10:00 AM", "Venue","Treasure Hunt", "Description",img5],
-    ["Day 8", "22nd Oct","6:30 PM", "Venue","Bathukamma", "Description",img5],
-    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Description",ravan],
+    ["Day 1", "15th Oct", "11:00 AM","Venue", "Pallakotsavam and Vigraha Prathistha", "Pallakotsavam refers to the grand procession where deities are carried in a palanquin", pallakotsavam],
+    ["Day 2", "16th Oct", "6:30 PM","Venue", "Shakti Moolam Balley", "Shakti Moolam symbolizes the divine feminine energy as the foundational force in Hindu Culture.", img1],
+    ["Day 3", "17th Oct","6:30 PM", "Venue","Statewise Cultural Dances", "Statewise cultural dances in India showcase the nation's rich diversity, each state having its distinct traditional dance forms", dances],
+    ["Day 4", "18th Oct","6:30 PM","Venue", "Khel Mela", "A carnival of traditional and modern games, fostering an atmosphere of fun and friendly competition.",khel],
+    ["Day 5", "19th Oct","6:30 PM","Venue", "Ten Team Games", "Engaging team-based games designed to promote teamwork, collaboration, and leadership skills.",team],
+    ["Day 6", "20th Oct","10:00 am","Venue", "Competitions", "Engaging competitions showcasing students' talents by fostering friendly rivalry and diverse art forms.",compete],
+    ["Day 7", "21st Oct","10:00 AM", "Venue","Treasure Hunt", "Thrilling treasure hunt, combining elements of exploration, intellectual challenge, and camaraderie.",Treasure],
+    ["Day 8", "22nd Oct","6:30 PM", "Venue","Bathukamma", "Vibrant celebration of Telangana's Bathukamma festival, incorporating traditional rituals.",bathukamma],
+    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Ravan Dahan is a Hindu ritual symbolizing the victory of good over evil, where an effigy of the demon king Ravana is burned.",ravan],
   ];
   function day_selected() {
     return (  
@@ -58,19 +51,20 @@ const Event = ({ change }) => {
                 </div>
                 <div className="box-content">
                   <div className="box-content-div2">
-                    <h6>{event[0]}</h6>
-                    <h6>({event[1]})</h6>
+                    <h6 style={{fontSize:"15px"}}>{event[0]}</h6>
+                    <h6 style={{fontSize:"15px"}}>({event[1]})</h6>
                   </div>
                   <div>
                     <div className="box-content-h5">
-                      <h5>{event[4]}</h5></div>
+                      <h5 style={{fontSize:"18px"}}>{event[4]}</h5>
+                    </div>
                     <div className="box-content-div1">
-                      <h6>{event[2]}</h6>
-                      <h6>({event[3]})</h6>
+                      <h6 style={{fontSize:"15px"}}>{event[2]}</h6>
+                      <h6 style={{fontSize:"15px"}}>({event[3]})</h6>
                     </div>
                   </div>
-                  <br></br>
-                  <p>{event[5]}</p>
+                  <br/>
+                  <p style={{fontSize:"12px"}}>{event[5]}</p>
                 </div>
               </div>
           </div>
