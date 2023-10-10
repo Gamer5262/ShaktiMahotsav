@@ -2,10 +2,10 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST");
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_pass = 'pmk';
-$db_name = 'Navratri';
+$db_host = 'shaktimahotsav';
+$db_user = 'shakthimahotsav';
+$db_pass = 'Sh@kthi@ch#2302';
+$db_name = 'navratri';
 
 $data = json_decode(file_get_contents("php://input"), true);
 

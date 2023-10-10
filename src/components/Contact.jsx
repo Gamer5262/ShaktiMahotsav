@@ -95,7 +95,7 @@ const Contact = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost/Form/contact.php", event, 
+      const response = await axios.post("http://shaktimahotsav.ch.amrita.edu/php/contact.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
@@ -117,14 +117,22 @@ const Contact = ({change}) => {
             <Title>Suggestion</Title>
             <Input placeholder="Name" {...register('name', { required: true })}/>
             {errors.name && <span className="error">Name is required</span>}
-            <Input placeholder="Phone Number" {...register('phone', { required: true })}/>
-            {errors.phone && <span className="error">phone is required</span>}
+            <Input placeholder="Phone Number" {...register('phone', { required: "Phone Number is required", validate:{
+                  maxLength: (v) =>
+    v.length <= 10 || "The Phone number should have 10 digits",
+    minLength: (v) =>
+    v.length >= 10 || "The Phone number should have 10 digits",
+                } })}
+              />
+              {errors.phone?.message && (
+    <small>{errors.phone.message}</small>
+  )}
             <TextArea
               placeholder="Write your message"
               rows={7}
               {...register('message', { required: true })}
             />
-            {errors.message && <span className="error">Name is required</span>}
+            {errors.message && <small className="error">Message is required</small>}
             <Button type="submit">Send</Button>
         </Form>
         <footer>
