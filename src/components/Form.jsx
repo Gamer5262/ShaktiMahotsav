@@ -31,7 +31,9 @@ const Form = ({change}) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {day1}
+  });
 
   const Submit = async(event) => {
     try {

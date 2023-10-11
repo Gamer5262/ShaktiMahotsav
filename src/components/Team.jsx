@@ -9,7 +9,7 @@ const Button = ({changes }) => {
   }
   return (
     <div className="btn-form" onClick={handleClick}>
-      Register
+      Join Us
     </div>
   )
 };
@@ -177,7 +177,7 @@ const Team = ({ change }) => {
             </div>}
         </div>
         </div>
-        <div style={{display:"flex", justifyContent:'space-between', alignItems:'center',width:'35vw',marginTop:"30px"}}>
+        <div className='formAbout'>
           <h5 style={{fontFamily: "Signika Negative, sans-serif", fontSize:'large'}}> Wanna organise? or Dance? or Lead from the front?<br/> Design stuff? Take part in spiritual recitations?  </h5>
           <Button style={{padding:"20px", fontFamily:"Tilt Neon, cursive"}} changes={change} />
         </div>

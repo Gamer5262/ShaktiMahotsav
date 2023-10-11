@@ -19,35 +19,35 @@ const Hero = () => {
          <MediaQuery minDeviceWidth={769}> 
           <Carousel fade>
           
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img2}
               alt="First slide"
             />
           </Carousel.Item>
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img3}
               alt="Second slide"
             />
           </Carousel.Item>
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img1}
               alt="Third slide"
             />
           </Carousel.Item>
-            <Carousel.Item interval={1200}>
+            <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img4}
               alt="Fourth slide"
               />
             </Carousel.Item>
-            <Carousel.Item interval={1200}>
+            <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img5}
@@ -59,28 +59,28 @@ const Hero = () => {
         <MediaQuery maxDeviceWidth={769}>
           <Carousel fade>
           
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img1mob}
               alt="First slide"
             />
           </Carousel.Item>
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img2mob}
               alt="Second slide"
             />
           </Carousel.Item>
-          <Carousel.Item interval={1200}>
+          <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img3mob}
               alt="Third slide"
             />
             </Carousel.Item>
-            <Carousel.Item interval={1200}>
+            <Carousel.Item interval={2000}>
             <img
               className="d-block w-100 img-slider"
               src={Img4mob}

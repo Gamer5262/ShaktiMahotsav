@@ -27,7 +27,7 @@
     @media screen and (max-width: 1000px){
         grid-template-columns: auto auto;
     }
-    @media screen and (max-width: 426px){
+    @media screen and (max-width: 506px){
         grid-template-columns: auto;
     }
 }
@@ -35,4 +35,16 @@
     padding: 20px;
     background-color: rgba(33, 33, 33, 0.85);
     border-radius: 10px;
+}
+.formAbout{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width:35vw;
+    margin-top:30px;
+    @media screen and (max-width:800px){
+        width:60vw;
+        flex-direction: column;
+        text-align: center;
+    }
 }
