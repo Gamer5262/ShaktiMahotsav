@@ -85,10 +85,10 @@ function Home() {
             </div>
           <div ref={elementRef}>
                 <Hero />
-                <About change={toggleFormAbout} />
                 <Event change={toggleFormEvent} />
+                <About  />
                 <Gallery />
-                <Team /> 
+                <Team change={toggleFormAbout}/> 
                 <Contact />
                 <Footer />
            </div>
@@ -96,11 +96,11 @@ function Home() {
     }
     else {
       return <div className='pushup' ref={elementRef}>
-        <Hero />
-        <About change={toggleFormAbout}/>
+          <Hero />
         <Event change={toggleFormEvent} />
+        <About />
         <Gallery />
-        <Team /> 
+        <Team change={toggleFormAbout}/> 
         <Contact />
         <Footer/>
       </div>;

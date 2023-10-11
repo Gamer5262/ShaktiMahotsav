@@ -1,13 +1,13 @@
 import "./Event.css"
-import ravan from '../assets/Event/Ravan Dahan.jpg'
-import bathukamma from '../assets/Event/Bathukamma.jpg'
-import Treasure from '../assets/Event/Treasure Hunt.jpg'
-import pallakotsavam from '../assets/Event/pallakotsavam.jpeg'
-import dances from '../assets/Event/Dances.jpg'
-import khel from '../assets/Event/khel.jpg'
-import team from '../assets/Event/team-games.png'
-import compete from '../assets/Event/competitions.png'
-import img1 from '../assets/img1.avif'
+import img1 from "../assets/Event/day1.jpg"
+import img2 from "../assets/Event/day2.jpg"
+import img3 from "../assets/Event/day3.jpg"
+import img4 from "../assets/Event/day4.jpg"
+import img5 from "../assets/Event/day5.jpg"
+import img6 from "../assets/Event/day6.jpg"
+import img7 from "../assets/Event/day7.jpg"
+import img8 from "../assets/Event/day8.jpg"
+import img9 from "../assets/Event/day9.jpg"
 
 
 const Button = ({changer}) => {
@@ -28,15 +28,15 @@ const Event = ({ change }) => {
   }
 
   const featured_events = [
-    ["Day 1", "15th Oct", "11:00 AM","Venue", "Pallakotsavam and Vigraha Prathistha", "Pallakotsavam refers to the grand procession where deities are carried in a palanquin", pallakotsavam],
-    ["Day 2", "16th Oct", "6:30 PM","Venue", "Shakti Moolam Balley", "Shakti Moolam symbolizes the divine feminine energy as the foundational force in Hindu Culture.", img1],
-    ["Day 3", "17th Oct","6:30 PM", "Venue","Statewise Cultural Dances", "Statewise cultural dances in India showcase the nation's rich diversity, each state having its distinct traditional dance forms", dances],
-    ["Day 4", "18th Oct","6:30 PM","Venue", "Khel Mela", "A carnival of traditional and modern games, fostering an atmosphere of fun and friendly competition.",khel],
-    ["Day 5", "19th Oct","6:30 PM","Venue", "Ten Team Games", "Engaging team-based games designed to promote teamwork, collaboration, and leadership skills.",team],
-    ["Day 6", "20th Oct","10:00 am","Venue", "Competitions", "Engaging competitions showcasing students' talents by fostering friendly rivalry and diverse art forms.",compete],
-    ["Day 7", "21st Oct","10:00 AM", "Venue","Treasure Hunt", "Thrilling treasure hunt, combining elements of exploration, intellectual challenge, and camaraderie.",Treasure],
-    ["Day 8", "22nd Oct","6:30 PM", "Venue","Bathukamma", "Vibrant celebration of Telangana's Bathukamma festival, incorporating traditional rituals.",bathukamma],
-    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Ravan Dahan is a Hindu ritual symbolizing the victory of good over evil, where an effigy of the demon king Ravana is burned.",ravan],
+    ["Day 1", "15th Oct", "11:00 AM","Venue", "Pallakotsavam and Vigraha Prathistha", "Pallakotsavam refers to the grand procession where deities are carried in a palanquin", img1],
+    ["Day 2", "16th Oct", "6:30 PM","Venue", "Shakti Moolam Balley", "Shakti Moolam symbolizes the divine feminine energy as the foundational force in Hindu Culture.", img2],
+    ["Day 3", "17th Oct","6:30 PM", "Venue","Statewise Cultural Dances", "Statewise cultural dances in India showcase the nation's rich diversity, each state having its distinct traditional dance forms", img3],
+    ["Day 4", "18th Oct","6:30 PM","Venue", "Khel Mela", "A carnival of traditional and modern games, fostering an atmosphere of fun and friendly competition.",img4],
+    ["Day 5", "19th Oct","6:30 PM","Venue", "Ten Team Games", "Engaging team-based games designed to promote teamwork, collaboration, and leadership skills.",img5],
+    ["Day 6", "20th Oct","10:00 am","Venue", "Competitions", "Engaging competitions showcasing students' talents by fostering friendly rivalry and diverse art forms.",img6],
+    ["Day 7", "21st Oct","10:00 AM", "Venue","Treasure Hunt", "Thrilling treasure hunt, combining elements of exploration, intellectual challenge, and camaraderie.",img7],
+    ["Day 8", "22nd Oct","6:30 PM", "Venue","Bathukamma", "Vibrant celebration of Telangana's Bathukamma festival, incorporating traditional rituals.",img8],
+    ["Day 9", "23rd Oct","7:30 PM", "Venue","Ravan Dahan", "Ravan Dahan is a Hindu ritual symbolizing the victory of good over evil, where an effigy of the demon king Ravana is burned.",img9],
   ];
   function day_selected() {
     return (  
