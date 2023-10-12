@@ -1,30 +1,21 @@
 import "./About.css";
-import img1 from "../assets/SMwbg_white.png";
+import img1 from "../assets/about.png";
 
-const Button = ({changes }) => {
-  function handleClick() {
-    changes();
-    window.scrollTo(0, 0);
-  }
-  return (
-    <div className="btn-form" onClick={handleClick}>
-      Register
-    </div>
-  )
-};
 
-function About({ change }) {
+
+function About() {
   return (
-    <div className='about' id='about'>
+    <div style={{fontFamily: "Sacremento, sans-serif"}} className='about' id='about'>
       <div className='section-about'>
-        <h4>About</h4>
+        <h4 style={{fontFamily: "Signika Negative, sans-serif"}}>About</h4>
         <div className="content">
-        <p>
-        Shakti Mahotsav '23 is a 10-day cultural spectacle that will utterly transform our campus into a vibrant mosaic of cultural magnificence, innovation, and unity. This event promises an immersive experience that transcends boundaries and empowers the souls of our Indian heritage Highlighting the devotion and spirituality of self.
-           </p>
-        <img src={img1} className="logo"></img>
+          <p className="para">
+            Navaratri is a major Hindu festival lasting nine nights and ten days, celebrating the goddess Durga in her various forms. It signifies the victory of good over evil and includes fasting, prayer, and dance performances like Garba and Dandiya.
+            </p>
+          <img src={img1} className="logo"></img>
         </div>
-        <Button changes={change} />
+        
+        
       </div>
     </div>
   )

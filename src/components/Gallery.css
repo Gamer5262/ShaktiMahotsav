@@ -11,16 +11,17 @@
     border-radius: 5px;
     padding: 20px;
     color: aliceblue;
+    text-align: center;
 }
 .slider-image{
     width: 25vw; 
-    height: 20vw;   
+    height: 15vw;   
     @media screen and (max-width:1026px) and (min-width: 425px){
         width: 40vw;
-        height: 40vw;
+        height: 25vw;
     }
     @media screen and (max-width: 425px) {
         width: 70vw;
-        height: 50vw;
+        height: 45vw;
     }
 }

@@ -2,10 +2,10 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST");
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_pass = 'pmk';
-$db_name = 'Navratri';
+$db_host = 'shaktimahotsav';
+$db_user = 'shakthimahotsav';
+$db_pass = 'Sh@kthi@ch#2302';
+$db_name = 'navratri';
 
 $data = json_decode(file_get_contents("php://input"), true);
 echo $data;
@@ -27,7 +27,7 @@ $phone = mysqli_real_escape_string($conn, $data['phone']);
 if (empty($name) || empty($phone) || empty($message)) {
   echo 'Please fill in all fields.';
 } else {
-  $query = "INSERT INTO feedback (name,phone,message) VALUES ('$name','$phone','$message')";
+  $query = "INSERT INTO feedback (name,email,message) VALUES ('$name','$phone','$message')";
   echo $query;
 
   if (mysqli_query($conn, $query)) {

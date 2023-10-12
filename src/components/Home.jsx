@@ -42,26 +42,53 @@ function Home() {
         toggleForm();
         setFormAbout(!formAbout);
         setFormEvent(false);
+        console.log(formAbout, formEvent);
     }
     function toggleFormEvent() {
         toggleForm();
         setFormEvent(!formEvent);
         setFormAbout(false);
+        console.log(formAbout, formEvent);
+    }
+    function displayAbout() {
+        toggleForm();
+        setFormAbout(true);
+        setFormEvent(false);
+        console.log(formAbout, formEvent);
+    }
+    function displayEvent() {
+        toggleForm();
+        setFormEvent(true);
+        setFormAbout(false);
+        console.log(formAbout, formEvent);
+    }
+    function closeAbout() {
+        toggleForm();
+        setFormAbout(false);
+        setFormEvent(false);
+        console.log(formAbout, formEvent);
+    }
+    function closeEvent() {
+        toggleForm();
+        setFormEvent(false);
+        setFormAbout(false);
+        console.log(formAbout, formEvent);
     }
   function displayForm() {
-    if (form) {
+      if (form) {
+        console.log(formAbout, formEvent);
         return (
         <div className='pushup'>
             <div className='darken' style={{ height: { height } }}>
                     {formAbout && <FormAbout change={toggleFormAbout}/>}
-                    {formEvent && <Form change={toggleFormAbout}/>}
+                    {formEvent && <Form change={toggleFormEvent}/>}
             </div>
           <div ref={elementRef}>
                 <Hero />
-                <About change={toggleFormAbout} />
                 <Event change={toggleFormEvent} />
+                <About  />
                 <Gallery />
-                <Team /> 
+                <Team change={toggleFormAbout}/> 
                 <Contact />
                 <Footer />
            </div>
@@ -69,11 +96,11 @@ function Home() {
     }
     else {
       return <div className='pushup' ref={elementRef}>
-        <Hero />
-        <About change={toggleFormAbout}/>
+          <Hero />
         <Event change={toggleFormEvent} />
+        <About />
         <Gallery />
-        <Team /> 
+        <Team change={toggleFormAbout}/> 
         <Contact />
         <Footer/>
       </div>;

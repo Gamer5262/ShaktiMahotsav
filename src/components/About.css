@@ -24,13 +24,23 @@
 .logo{
     width: 20vw;
     height: inherit;
+    @media screen and (max-width: 800px) {
+        width: 50vw;
+    }
 }
 
 .content{
+    display: grid;
     display: flex;
     flex-direction: row;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
+    @media screen and ( max-width: 800px) {
+        grid-template-columns: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     gap: 5vw;
     margin-top: 5vh;
 }
@@ -46,4 +56,8 @@
         width: 80vw;
         height: 50vh;
     }
+}
+.para{
+    width: 40vw;
+    font-size: x-large;
 }
