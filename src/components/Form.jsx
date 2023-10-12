@@ -43,7 +43,7 @@ const Form = ({change}) => {
           event["day" + i.toString()] = 0;
         }
       }
-      const response = await axios.post("http://localhost/Form/submit.php", event, 
+      const response = await axios.post("http://shaktimahotsav.com/php/submit.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100

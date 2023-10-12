@@ -95,7 +95,7 @@ const Contact = ({change}) => {
       const headers = {
         'Content-Type': 'application/json; charset=UTF-8',
       }
-      const response = await axios.post("http://localhost/Form/contact.php", event, 
+      const response = await axios.post("http://shaktimahotsav.com/php/contact.php", event, 
       {headers: headers, 
       maxBodyLength: 100,
           maxContentLength: 100
