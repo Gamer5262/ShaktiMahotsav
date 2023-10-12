@@ -200,3 +200,20 @@ h2{
 .timeline{
     padding-bottom: 20px;
 }
+
+.eventAbout{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:35vw;
+    margin:30px;
+    @media screen and (max-width:800px){
+        width:60vw;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.eventAbout h5{
+    padding-right: 1vw;
+}
