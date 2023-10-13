@@ -60,4 +60,10 @@
 .para{
     width: 40vw;
     font-size: x-large;
+    @media screen and ( max-width: 800px){
+        font-size: large;
+    }
+    @media screen and ( max-width: 400px){
+        font-size:medium;
+    }
 }

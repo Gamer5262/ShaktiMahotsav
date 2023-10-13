@@ -94,7 +94,7 @@ const Team = ({ change }) => {
                 <h6>Vineeth</h6>
             </div>}
           </div>
-          <div >
+          <div  className=' teams'>
             <div className='question' onClick={toggleT2}>
               <h5>Technical Team</h5>
               {!t2 && <h5>+</h5>}
@@ -113,7 +113,7 @@ const Team = ({ change }) => {
               <h6>Manoj Sri Sai</h6>
             </div>}
         </div>
-        <div >
+        <div  className=' teams'>
             <div className='question' onClick={toggleT3}>
                 <h5>Food Department</h5>
             {!t3 && <h5>+</h5>}
@@ -128,12 +128,12 @@ const Team = ({ change }) => {
               <h6>Kritik</h6>
             </div>}
           </div>
-          <div className='questions'>
+          <div  className=' teams'>
             <div className='question' onClick={toggleT4}>
                 <h5>Decor Team </h5>
                 {!t4 && <h5>+</h5>}
                 {t4 && <h5>-</h5>}
-            </div>
+            </div >
             {t4 && <div className='answer'>
                 <h6>Sahithi Sastry</h6>
               <h6>Mahima Singh</h6>
@@ -145,7 +145,7 @@ const Team = ({ change }) => {
               <h6>Anshitha</h6>
             </div>}
           </div>
-          <div className='questions'>
+          <div  className=' teams'>
             <div className='question' onClick={toggleT5}>
                 <h5>Mandampam Team</h5>
                 {!t5 && <h5>+</h5>}
@@ -160,7 +160,7 @@ const Team = ({ change }) => {
               <h6>keerthi</h6>
             </div>}
           </div>
-          <div className='questions'>
+          <div  className=' teams'>
             <div className='question' onClick={toggleT6}>
                 <h5>Events Team</h5>
                 {!t6 && <h5>+</h5>}

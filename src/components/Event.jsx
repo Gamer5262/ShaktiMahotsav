@@ -17,7 +17,7 @@ const Button = ({changer}) => {
   }
   return (
     <div className="btn-form" onClick={handleClick}>
-      Register
+      Register Now!
     </div>
   )
 }
@@ -81,6 +81,12 @@ const Event = ({ change }) => {
         {
             day_selected()
         }
+        <div className='eventAbout'>
+          <h5 style={{fontFamily: "Signika Negative, sans-serif", fontSize:'large'}}> Download the full event brochure here </h5>
+          <a href="src\assets\hero\slide5.gif" download="Event List" target='_blank'>
+          <button type="button" class="btn-form">Download Resume</button>
+          </a>
+        </div>
         <div>
           <Button changer={click} />
         </div>
